@@ -3,7 +3,7 @@
 /**
  * main - ndkb
  *
- * return: 0
+ * Return: 0 if the
  */
 int main(void)
 {
