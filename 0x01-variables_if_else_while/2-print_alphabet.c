@@ -1,15 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int main(void)
+/**
+ * main- thid
+ *
+ * Return: 0 if
+ */
+int main(void) /*main*/
 {
 	char c;
 	c = 'a';
 
-	while (c <= 'z'){
+	while(c <= 'z'){
 		putchar(c);
 		c++;
 	}
 	putchar('\n');
-	return(0);
+	return (0);
 }
