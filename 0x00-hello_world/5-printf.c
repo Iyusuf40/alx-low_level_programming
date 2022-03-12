@@ -1,7 +1,8 @@
 #include <stdio.h>
-/*
- * this
- *ismain
+/**
+ * main - does
+ *
+ * Return: 0 if
  */
 int main(void) /*main func*/
 {
