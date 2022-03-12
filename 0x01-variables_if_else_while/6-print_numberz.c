@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * main - does
- * 
+ *
  * Return: 0 if
  */
 int main(void) /*main*/
@@ -13,7 +13,7 @@ int main(void) /*main*/
 
 	while (i < 10)
 	{
-		(int)putchar(i);
+		putchar(int i);
 		i++;
 	}
 	putchar('\n');
