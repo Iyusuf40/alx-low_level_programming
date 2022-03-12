@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main
+ * main- does
  *
- * Return
+ * Return: 0 if
  */
 int main(void) /*main*/
 {
@@ -14,6 +14,7 @@ int main(void) /*main*/
 	while (i < 10)
 	{
 		printf("%d", i);
+		i++;
 	}
 	printf("\n");
 	return (0);
