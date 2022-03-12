@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - does 
- *
- * Return: 0 if 
+ * main - does
+ * 
+ * Return: 0 if
  */
 int main() /*main*/
 {
@@ -13,7 +13,7 @@ int main() /*main*/
 
 	while (i < 10)
 	{
-		putchar((int)i);
+		(int)putchar(i);
 		i++;
 	}
 	putchar('\n');
