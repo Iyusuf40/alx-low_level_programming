@@ -1,15 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int main(void)
+/**
+ * main- does this
+ *
+ * Return: 0 if the
+ */
+int main(void) /*main*/
 {
 	int i;
-	i = 0;
-	while (i < 10){
+
+	i = 48;
+
+	while (i < 58)
+	{
 		putchar(i);
-		putchar(", ");
+		putchar(44);
+		putchar(32);
 		i++;
 	}
-	putchar("$\n");
-	return(0);
+	putchar(36);
+	return (0);
 }

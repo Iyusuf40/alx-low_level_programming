@@ -7,13 +7,15 @@
  */
 int main(void) /*main*/
 {
-	i = 0;
+	int i;
 
-	while (i < 10)
+	i = 48;
+
+	while (i < 58)
 	{
-		int putchar(int i);
+		putchar(i);
 		i++;
 	}
-	putchar('\n');
+	putchar(10);
 	return (0);
 }
