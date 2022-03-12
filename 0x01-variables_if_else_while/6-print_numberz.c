@@ -7,14 +7,12 @@
  */
 int main(void) /*main*/
 {
-	int i;
-
 	i = 0;
 
 	while (i < 10)
 	{
-		int putchar(i);
-		int i++;
+		int putchar(int i);
+		i++;
 	}
 	putchar('\n');
 	return (0);
