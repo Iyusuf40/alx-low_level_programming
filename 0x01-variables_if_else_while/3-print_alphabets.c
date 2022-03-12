@@ -1,21 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int main(void)
+/**
+ * main - this
+ *
+ * Return: 0 if
+ */
+int main(void) /*main*/
 {
 	char lower;
 	char upper;
+
 	lower = 'a';
 	upper = 'A';
 
-	while (lower <= 'z'){
+	while (lower <= 'z')
+	{
 		putchar(lower);
 		lower++;
 	}
-	while (upper <= 'Z'){
+	while (upper <= 'Z')
+	{
 		putchar(upper);
 		upper++;
 	}
 	putchar('\n');
-	return(0);
+	return (0);
 }
