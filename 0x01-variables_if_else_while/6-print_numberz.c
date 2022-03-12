@@ -1,14 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int main()
+/**
+ * main - does 
+ *
+ * Return: 0 if 
+ */
+int main() /*main*/
 {
 	int i;
+
 	i = 0;
-	while (i < 10){
+
+	while (i < 10)
+	{
 		putchar(i);
 		i++;
 	}
 	putchar('\n');
-	return(0);
+	return (0);
 }
