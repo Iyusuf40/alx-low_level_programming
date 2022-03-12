@@ -5,7 +5,7 @@
  * 
  * Return: 0 if
  */
-int main() /*main*/
+int main(void) /*main*/
 {
 	int i;
 
