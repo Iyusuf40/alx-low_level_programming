@@ -14,7 +14,7 @@ int main(void) /*main*/
 	while (i < 10)
 	{
 		int putchar(i);
-		i++;
+		int i++;
 	}
 	putchar('\n');
 	return (0);
