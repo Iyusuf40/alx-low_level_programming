@@ -1,9 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int main(void)
+/**
+ * main - does
+ *
+ * Return: 0 if
+ */
+int main(void) /*main function*/
 {
 	char c;
+
 	c = 'a';
 
 	while (c <= 'z'){
@@ -13,5 +18,5 @@ int main(void)
 		c++;
 	}
 	putchar('\n');
-	return(0);
+	return (0);
 }
