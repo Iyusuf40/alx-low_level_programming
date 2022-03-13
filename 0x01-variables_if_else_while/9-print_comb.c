@@ -15,7 +15,7 @@ int main(void) /*main*/
 	{
 		putchar(i);
 		putchar(44);
-		if (i != 57)
+		if (i != 56)
 			putchar(32);
 		i++;
 	}
