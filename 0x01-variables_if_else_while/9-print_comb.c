@@ -15,8 +15,10 @@ int main(void) /*main*/
 	{
 		putchar(i);
 		if (i != 57)
+		{
 			putchar(44);
 			putchar(32);
+		}
 		i++;
 	}
 	putchar(10);
