@@ -14,9 +14,9 @@ int main(void) /*main*/
 	while (i < 58)
 	{
 		putchar(i);
-		putchar(44);
 		if (i != 56)
-			putchar(32);
+			putchar(44);
+		putchar(32);
 		i++;
 	}
 	return (0);
