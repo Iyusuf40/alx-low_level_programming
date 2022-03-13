@@ -18,6 +18,5 @@ int main(void) /*main*/
 		putchar(32);
 		i++;
 	}
-	putchar(36);
 	return (0);
 }
