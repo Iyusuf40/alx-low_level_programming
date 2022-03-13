@@ -19,5 +19,6 @@ int main(void) /*main*/
 		putchar(32);
 		i++;
 	}
+	putchar(10);
 	return (0);
 }
