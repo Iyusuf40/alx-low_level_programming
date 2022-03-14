@@ -17,8 +17,6 @@ int main(void)
 	  j = '1';
 		while (j <= '9')
 		{
-		  //putchar(i);
-		  //putchar(j);
 		  if (i != j)
 		  {
 		      if (j > i)
