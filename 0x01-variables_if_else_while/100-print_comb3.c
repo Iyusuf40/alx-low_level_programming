@@ -18,26 +18,26 @@ int main(void)
 		{
 			if (i != j)
 			{
-		      		if (j > i)
-		      		{
-		          		putchar(i);
-		          		putchar(j);
-		      		}
-		  	}
+				if (j > i)
+				{
+					putchar(i);
+					putchar(j);
+				}
+			}
 			if ((i != '8') || (j != '9'))
 			{
 				if (i != j)
-			     	{
-			        	if (j > i)
-			          	{
-		                  		putchar(',');
-			                	putchar(' ');
-			          	}
-			     	}
+				{
+					if (j > i)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
 			}
 			j++;
 		};
-	  	i++;
+		i++;
 	};
 	putchar('\n');
 	return (0);
