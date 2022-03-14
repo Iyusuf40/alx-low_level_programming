@@ -29,11 +29,13 @@ int main(void)
 						putchar(k);
 					}
 				}
-				if (((i != '7') || (j != '8') || (k != '9')) && (i != j && j != k) && (j >\
-				 i && k > j))
+				if (((i != '7') || (j != '8') || (k != '9')) && (i != j && j != k))
 				{
-					putchar(',');
-					putchar(' ');
+					if ((j > i) && (k > j))
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 				k++;
 			}
