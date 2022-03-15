@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include "main.h"
-void print_alphabet()
+/**
+ * print_alphabet - prints lower
+ * Return: void if successful
+ */
+void print_alphabet(void)
 {
 	int i = 'a';
 
