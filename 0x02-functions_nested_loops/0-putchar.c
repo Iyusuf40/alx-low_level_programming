@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "main.h"
+#ifndef _MAIN_H
+#define _MAIN_H
 /**
  * main - employs _putchar() func
  * Return: 0 if successful
@@ -20,3 +22,4 @@ int main(void)
 	_putchar('\n');
 	return (0);
 }
+#endif
