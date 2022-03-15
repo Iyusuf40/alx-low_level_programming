@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_alphabet - prints lower
+ * print_alphabet_x10 - prints lower
  * Return: void if successful
  */
 void print_alphabet_x10(void)
@@ -17,7 +17,7 @@ void print_alphabet_x10(void)
 			_putchar(i);
 			i++;
 		}
+		_putchar('\n');
 		loop++;
-	}	
-	_putchar('\n');
+	}
 }
