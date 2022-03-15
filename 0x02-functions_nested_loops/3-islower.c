@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _islower - checks if argument is lower case or upper
+ * _islower - checks if c is lower case or upper
  * Return: 1 if lower else 0
  */
 int _islower(int c)
