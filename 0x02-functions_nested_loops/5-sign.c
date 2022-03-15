@@ -4,7 +4,7 @@
  * print_sign - checks if argument is less or more than 0
  * Return: 1 and print + if positive, 0 if 0 else -1
  */
-int print_sign(int n);
+int print_sign(int n)
 {
 	if (n > 0)
 	{

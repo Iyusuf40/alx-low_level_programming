@@ -4,7 +4,7 @@
  * _islower - checks if argument is lower case or upper
  * Return: 1 if lower else 0
  */
-int _islower(int c);
+int _islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (1);
