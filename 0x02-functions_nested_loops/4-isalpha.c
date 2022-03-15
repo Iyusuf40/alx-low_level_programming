@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  * _isalpha - checks if c argument is alphabet
- * c: is int
+ * @c: is int
  * Return: 1 if alphabet 0 if otherwise
  */
 int _isalpha(int c)
