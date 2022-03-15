@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+/* #include "main.h" */
 /**
  * main - employs _putchar() func
  * Return: 0 if successful
