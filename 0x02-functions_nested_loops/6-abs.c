@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
- * int _abs(int c) - computes absolute value of c
- * @c - parameter to computed on
+ * _abs - computes absolute value of c
+ * @c : parameter to computed on
  * Return: c to caller
  */
 int _abs(int c)
