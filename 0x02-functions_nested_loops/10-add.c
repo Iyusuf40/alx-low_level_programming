@@ -3,7 +3,7 @@
  * add - sums 2 numbers
  * @i : is first digit
  * @j : is second digit to add to a
- * Return : c if success
+ * Return: on success c
  */
 int add(int i, int j)
 {
