@@ -9,19 +9,25 @@ void print_diagonal(int n)
 {
 	if (n > 0)
 	{
-		int x = 0;
+		int x, y;
+		x = 0;
 
 		while (x < n)
 		{
-			putchar('\\');
-			putchar('\n');
-			int y = -1;
+			/*putchar('\\');
+			if (x != (n - 1))
+				putchar('\n');*/
+			y = 0;
 
 			while (y < x)
 			{
+				/*if (y != (n - 1))*/
 				putchar(' ');
 				y++;
 			}
+			putchar('\\');
+			if (x != (n - 1))
+				putchar('\n');
 			x++;
 		}
 	}
@@ -31,5 +37,8 @@ void print_diagonal(int n)
 {
 	print_diagonal(0);
 	print_diagonal(2);
-	print_diagonal(12);
+	print_diagonal(10);
+	print_diagonal(-4);
+
+	return (0);
 }
