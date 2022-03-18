@@ -12,9 +12,9 @@ void print_diagonal(int n)
 
 		while (x < n)
 		{
-			_putchar('\');
+			_putchar('\\');
 			_putchar('\n');
-			int y = 0;
+			int y = -1;
 
 			while (y < x)
 			{
