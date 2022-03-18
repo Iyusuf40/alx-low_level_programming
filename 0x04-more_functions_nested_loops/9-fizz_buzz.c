@@ -4,7 +4,7 @@
 int main(void)
 {
 	int i;
-	
+
 	i = 1;
 
 	while (i < 101)
@@ -17,6 +17,7 @@ int main(void)
 			printf("Buzz ");
 		else
 			printf("%d ", i);
+		i++;
 	}
 	printf("\n");
 
