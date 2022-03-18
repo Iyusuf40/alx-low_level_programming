@@ -4,7 +4,7 @@
  * print_line - prints seriesd of _
  * @n: the number of _ to print
  */
-void print_line(int n)
+void print_line (int n)
 {
 	if (n > 0)
 	{
