@@ -4,10 +4,8 @@
  * print_number - prints char numbers
  * @n: number to print
  */
-void print_number(int n)
+void print_number(short int n)
 {
-/*	n = (short int) n; */
-
 	if (n < 0)
 	{
 		n = -n;
