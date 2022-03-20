@@ -6,7 +6,7 @@
  */
 void print_number(int n)
 {
-	if (n == INT_MIN)
+	if (n < -2147483647)
 	{
 		int t;
 		int i;
@@ -18,7 +18,7 @@ void print_number(int n)
 		print_number(i);
 	}
 
-	if (n < 0 && n != INT_MIN)
+	if (n < 0 && n != -2147483648)
 	{
 		n = -n;
 		_putchar('-');
