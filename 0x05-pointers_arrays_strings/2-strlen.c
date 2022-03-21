@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * _strlem - returns lentgh of sting
+ * _strlen - returns lentgh of sting
  * @s: par str
+ * Return: i after loop
  */
 int _strlen(char *s)
 {
