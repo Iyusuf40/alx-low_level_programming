@@ -6,11 +6,12 @@
  */
 void rev_string(char *s)
 {
-	int max, i;
+	int max, i, j;
 	char *arr = "abcdefghijklmnop";
 
 	max = _strlen(s) - 1;
 	i = 0;
+	j = 0;
 
 	while (*s != '\0')
 	{
@@ -19,14 +20,12 @@ void rev_string(char *s)
 		i++;
 	}
 
-	i = 0;
 	while (max >= 0)
 	{
-		*(s + max) = *(arr + i);
+		*(s + max) = *(arr + j);
 		max--;
-		i++;
+		j++;
 	}
-	_putchar('\n');
 }
 
 /**
