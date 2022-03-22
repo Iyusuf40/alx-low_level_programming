@@ -22,8 +22,11 @@ void puts2(char *str)
 	while (i < ((count / 2) + 1))
 	{
 		_putchar(*str);
-		if (*(str + 1) == '\0')
+		if (*(str + 2) == '\0')
+		{
+			_putchar(*(str +1));
 			break;
+		}
 		str += 2;
 		i++;
 	}
