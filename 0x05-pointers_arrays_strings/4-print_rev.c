@@ -14,12 +14,12 @@ void print_rev(char *s)
 		_putchar('\n');
 	else
 	{
-		while (max > 0)
+		while (max >= 0)
 		{
 			_putchar(*(s + max));
 			max--;
 		}
-		_putchar('\n');
+	/*	_putchar('\n'); */
 	}
 }
 
