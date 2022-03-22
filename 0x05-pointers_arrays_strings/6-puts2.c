@@ -24,7 +24,7 @@ void puts2(char *str)
 		_putchar(*str);
 		str += 2;
 		if ((str + 1) == '\0')
-			break
+			break;
 		i++;
 	}
 	_putchar('\n');
