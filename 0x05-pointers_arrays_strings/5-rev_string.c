@@ -7,22 +7,24 @@
 void rev_string(char *s)
 {
 	int max, i, j;
-	char *arr = "";
+	char *ss;
 
 	max = _strlen(s);
+	char arr[max];
+	ss = s;
 	i = 0;
 	j = 0;
 
-	while (*s != *(s + max))
+	while (*s != '\0')
 	{
 		*(arr + i) = *s;
 		s++;
 		i++;
 	}
 
-	while (max > 0)
+	while (max >= 0)
 	{
-		*(s + max) = *(arr + j);
+		*(ss + max) = *(arr + j);
 		max--;
 		j++;
 	}
