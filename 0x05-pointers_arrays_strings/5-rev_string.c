@@ -7,11 +7,10 @@
 void rev_string(char *s)
 {
 	int max, i;
+	char arr[max + 1];
 
 	max = _strlen(s) - 1;
 	i = 0;
-
-	char arr[max + 1];
 
 	while (*s != '\0')
 	{
