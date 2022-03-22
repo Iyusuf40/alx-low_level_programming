@@ -13,7 +13,7 @@ void rev_string(char *s)
 	i = 0;
 	j = 0;
 
-	while (*s != s[max])
+	while (*s != *(s + max})
 	{
 		*(arr + i) = *s;
 		s++;
