@@ -8,7 +8,7 @@ void print_rev(char *s)
 {
 	int max;
 
-	max = _strlen(s);
+	max = _strlen(s) - 1;
 
 	if (max == 0)
 		_putchar('\n');
@@ -19,7 +19,7 @@ void print_rev(char *s)
 			_putchar(*(s + max));
 			max--;
 		}
-	/*	_putchar('\n'); */
+		_putchar('\n');
 	}
 }
 
