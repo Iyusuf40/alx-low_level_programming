@@ -20,7 +20,7 @@ void rev_string(char *s)
 		i++;
 	}
 
-	while (max >= 0)
+	while (max > 0)
 	{
 		*(s + max) = *(arr + j);
 		max--;
