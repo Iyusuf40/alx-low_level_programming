@@ -6,14 +6,25 @@
  */
 void rev_string(char *s)
 {
-	int max;
+	int max, i;
 
 	max = _strlen(s) - 1;
+	i = 0;
+
+	char arr[max + 1];
+
+	while (*s != '\0')
+	{
+		arr[i] = *s;
+		s++;
+		i++;
+	}
 
 	while (max >= 0)
 	{
-		_putchar(*(s + max));
+		*(s + max) = arr[i];
 		max--;
+		i++;
 	}
 	_putchar('\n');
 }
