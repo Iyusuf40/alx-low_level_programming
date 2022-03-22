@@ -7,11 +7,11 @@
 void rev_string(char *s)
 {
 	int max, i;
-	char *arr = "a";
+	char *arr;
 
 	max = _strlen(s) - 1;
 	i = 0;
-/*	*arr = 'a'; */
+	arr[max + 1];
 
 	while (*s != '\0')
 	{
