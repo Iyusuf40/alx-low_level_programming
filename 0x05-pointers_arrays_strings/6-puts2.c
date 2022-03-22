@@ -23,8 +23,8 @@ void puts2(char *str)
 	{
 		if (*str == '\0')
 			break;
-		if (*str == str[count])
-			break;
+	/*	if (*str == str[count])
+			break;*/
 		_putchar(*str);
 		str += 2;
 		i++;
