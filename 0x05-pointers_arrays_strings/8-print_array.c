@@ -12,6 +12,11 @@ void print_array(int *a, int n)
 
 	while (z < n)
 	{
+		if (z == n - 1)
+		{
+			printf("%d", a[z]);
+			break;
+		}
 		printf("%d, ", a[z]);
 		z++;
 	}
