@@ -10,7 +10,7 @@ void rev_string(char *s)
 	char *ss;
 	char arr[12];
 
-	max = _strlen(s);
+	max = _strlen(s) - 1;
 	ss = s;
 	i = 0;
 	j = 0;
