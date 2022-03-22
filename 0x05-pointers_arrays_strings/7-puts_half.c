@@ -29,7 +29,8 @@ void puts_half(char *str)
 			_putchar(*(s + half));
 		}
 		else if (i % 2 == 1)
-			_putchar(*(s + half + 1));
+			if (*(s + half + 1) != '\0')
+				_putchar(*(s + half + 1));
 		s++;
 	}
 	_putchar('\n');
