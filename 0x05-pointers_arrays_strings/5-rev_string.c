@@ -11,8 +11,6 @@ void rev_string(char *s)
 
 	max = _strlen(s) - 1;
 	i = 0;
-	arr[max + 1];
-	arr[0] = 'a';
 
 	while (*s != '\0')
 	{
@@ -21,6 +19,7 @@ void rev_string(char *s)
 		i++;
 	}
 
+	i = 0;
 	while (max >= 0)
 	{
 		*(s + max) = *(arr + i);
