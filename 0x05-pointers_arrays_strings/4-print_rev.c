@@ -20,6 +20,7 @@ void print_rev(char *s)
 /**
  * _strlen(char *s) - prints array of chars in rev order
  * @s: is par
+ * Return: i as len
  */
 int _strlen(char *s)
 {
