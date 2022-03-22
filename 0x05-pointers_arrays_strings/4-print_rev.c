@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_rev(char *s) - prints array of chars in rev order
+ * print_rev - prints array of chars in rev order
  * @s: is par
  */
 void print_rev(char *s)
@@ -15,10 +15,11 @@ void print_rev(char *s)
 		_putchar(*(s + max));
 		max--;
 	}
+	_putchar('\n');
 }
 
 /**
- * _strlen(char *s) - prints array of chars in rev order
+ * _strlen - prints array of chars in rev order
  * @s: is par
  * Return: i as len
  */
