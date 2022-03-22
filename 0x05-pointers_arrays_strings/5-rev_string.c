@@ -9,7 +9,7 @@ void rev_string(char *s)
 	int max, i, j;
 	char *arr = "abcdefghijklmnop";
 
-	max = 11;
+	max = 3;
 	i = 0;
 	j = 0;
 
