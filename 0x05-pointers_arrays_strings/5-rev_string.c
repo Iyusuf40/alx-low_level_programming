@@ -7,7 +7,7 @@
 void rev_string(char *s)
 {
 	int max, i;
-	char arr[max + 1];
+	char arr*;
 
 	max = _strlen(s) - 1;
 	i = 0;
