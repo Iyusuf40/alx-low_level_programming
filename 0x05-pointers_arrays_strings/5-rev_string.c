@@ -8,13 +8,13 @@ void rev_string(char *s)
 {
 	int max, i, j;
 	char *ss;
-	char arr;
 
 	max = _strlen(s);
-	arr = arr[max];
 	ss = s;
 	i = 0;
 	j = 0;
+
+	arr[max];
 
 	while (*s != '\0')
 	{
