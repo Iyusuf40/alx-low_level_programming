@@ -10,12 +10,17 @@ void print_rev(char *s)
 
 	max = _strlen(s) - 1;
 
-	while (max >= 0)
+	if (max == 0)
+		_putchar('\n');
+	else
 	{
-		_putchar(*(s + max));
-		max--;
+		while (max >= 0)
+		{
+			_putchar(*(s + max));
+			max--;
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
 
 /**
