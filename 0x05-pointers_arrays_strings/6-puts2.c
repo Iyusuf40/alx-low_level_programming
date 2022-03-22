@@ -6,10 +6,11 @@
  */
 void puts2(char *str)
 {
-	int count;
+	int count, i;
 	char *holder;
 
 	count = 0;
+	i = 0;
 	holder = str;
 
 	while (*holder != '\0')
@@ -18,14 +19,11 @@ void puts2(char *str)
 		holder++;
 	}
 
-	while (*str != '\0')
+	while (i < (count / 2))
 	{
-		if (count % 2 == 0)
-		{
-			_putchar(*(str));
-			str += 2;
-			count /= 2;
-		}
+		_putchar(*str);
+		str += 2;
+		i++;
 	}
 	_putchar('\n');
 }
