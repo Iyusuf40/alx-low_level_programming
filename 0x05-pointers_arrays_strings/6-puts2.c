@@ -19,10 +19,12 @@ void puts2(char *str)
 		holder++;
 	}
 
-	while (i < (count / 2))
+	while (i < ((count / 2) + 1))
 	{
 		_putchar(*str);
 		str += 2;
+		if ((str + 1) == '\0')
+			break
 		i++;
 	}
 	_putchar('\n');
