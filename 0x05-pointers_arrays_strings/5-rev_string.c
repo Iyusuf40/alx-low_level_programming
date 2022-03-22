@@ -7,13 +7,13 @@
 void rev_string(char *s)
 {
 	int max, i, j;
-	char *arr = "abcdefghijklmnop";
+	char *arr = "";
 
 	max = 3;
 	i = 0;
 	j = 0;
 
-	while (*s != *(s + max))
+	while (*s != 'n')
 	{
 		*(arr + i) = *s;
 		s++;
