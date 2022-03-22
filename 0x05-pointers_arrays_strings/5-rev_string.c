@@ -9,11 +9,11 @@ void rev_string(char *s)
 	int max, i, j;
 	char *arr = "";
 
-	max = 3;
+	max = _strlen(s);
 	i = 0;
 	j = 0;
 
-	while (*s != 'n')
+	while (*s != *(s + max))
 	{
 		*(arr + i) = *s;
 		s++;
