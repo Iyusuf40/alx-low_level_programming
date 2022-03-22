@@ -14,7 +14,7 @@ void rev_string(char *s)
 	i = 0;
 	j = 0;
 
-	char arr[max];
+	char arr[9];
 
 	while (*s != '\0')
 	{
