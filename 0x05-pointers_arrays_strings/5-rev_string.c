@@ -14,14 +14,14 @@ void rev_string(char *s)
 
 	while (*s != '\0')
 	{
-		arr[i] = *s;
+		*(arr + i) = *s;
 		s++;
 		i++;
 	}
 
 	while (max >= 0)
 	{
-		*(s + max) = arr[i];
+		*(s + max) = *(arr + i);
 		max--;
 		i++;
 	}
