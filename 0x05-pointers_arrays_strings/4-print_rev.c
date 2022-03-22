@@ -6,7 +6,7 @@
  */
 void print_rev(char *s)
 {
-	int max, j;
+	int max;
 
 	max = _strlen(s);
 
