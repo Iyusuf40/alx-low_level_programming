@@ -46,7 +46,7 @@ int _atoi(char *s)
 		{
 			slen++;
 			sign++;
-			if (*sign < '0' || *sign > '9')
+			if (*sign >= '0' && *sign <= '9')
 				break;
 
 		}
