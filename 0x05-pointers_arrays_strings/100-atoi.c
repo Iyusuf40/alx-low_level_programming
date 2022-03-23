@@ -12,7 +12,8 @@ int _pow(int s, int v)
 
 int _atoi(char *s)
 {
-        int len, ilen, slen, i, j, v, y, x;
+        int len, ilen, slen, i, j, v, y;
+	unsigned int x;
         char *ss;
         int *si;
         char *sss;
@@ -69,6 +70,6 @@ int _atoi(char *s)
           i++;
         }
         if (slen % 2 == 1)
-		return -x;
+		return (int) -x;
 	return x;
 }
