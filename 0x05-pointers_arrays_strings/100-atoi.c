@@ -48,14 +48,14 @@ int _atoi(char *s)
           if (*sss >= '0' && *sss <= '9')
           {
             ilen++;
+            if (*sss < '0' || *sss > '9')
+                break;
           }
           sss++;
         }
 
         while (i < len)
         {
-          if (*s < '0' || *s > '9')
-               break;
           if (*s >= '0' && *s <= '9')
           {
             *si = *s - '0';
@@ -64,6 +64,8 @@ int _atoi(char *s)
             x += y;
             ilen--;
             s++;
+            if (*s < '0' || *s > '9')
+                break;
           }
           else
           {
