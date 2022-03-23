@@ -1,6 +1,6 @@
 int _pow(int s, int v)
 {
-  int i, x, y;
+  int y;
   y = 1;
   
   for (v; v > 0; v--)
@@ -14,7 +14,6 @@ int _atoi(char *s)
 {
         int len, ilen, i, j, v, y, x;
         char *ss;
-        char *start;
         int *si;
         char *sss;
 
@@ -25,7 +24,6 @@ int _atoi(char *s)
         len = 0;
         i = 0;
         ilen = 0;
-        start = s;
         sss = s;
 
         while (*ss != '\0')
