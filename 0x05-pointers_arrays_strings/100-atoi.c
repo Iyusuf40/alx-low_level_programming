@@ -50,6 +50,8 @@ int _atoi(char *s)
 				break;
 
 		}
+		else
+			sign++;
 	}
 	while (*ss != '\0')
 	{
@@ -65,6 +67,8 @@ int _atoi(char *s)
 			if (*sss < '0' || *sss > '9')
 				break;
 		}
+		else
+			sss++;
 	}
 	while (i < len)
 	{
