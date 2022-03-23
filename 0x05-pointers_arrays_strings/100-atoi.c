@@ -17,7 +17,7 @@ int _atoi(char *s)
         char *start;
         int *si;
         char *sss;
-        
+
         x = 0;
         y = 0;
         ss = s;
@@ -51,7 +51,6 @@ int _atoi(char *s)
             v = _pow(10, (ilen - 1));
             y = v * *si;
             x += y;
-            printf("x :%d\n", x);
             ilen--;
             s++;
           }
