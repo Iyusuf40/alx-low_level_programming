@@ -1,4 +1,4 @@
-int pow(int s, int v)
+int _pow(int s, int v)
 {
   int i, x, y;
   y = 1;
@@ -48,7 +48,7 @@ int _atoi(char *s)
           if (*s >= '0' && *s <= '9')
           {
             *si = *s - '0';
-            v = pow(10, (ilen - 1));
+            v = _pow(10, (ilen - 1));
             y = v * *si;
             x += y;
             printf("x :%d\n", x);
