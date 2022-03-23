@@ -62,6 +62,8 @@ int _atoi(char *s)
             x += y;
             ilen--;
             s++;
+	    if (*s < '0' || *s > '9')
+		break;
           }
           else
           {
