@@ -12,19 +12,29 @@ int _pow(int s, int v)
 
 int _atoi(char *s)
 {
-        int len, ilen, i, j, v, y, x;
+        int len, ilen, slen, i, j, v, y, x;
         char *ss;
         int *si;
         char *sss;
+	char *sign;
 
         x = 0;
         y = 0;
         ss = s;
+	sign = s;
         si = &j;
         len = 0;
         i = 0;
+	slen = 0;
         ilen = 0;
         sss = s;
+
+        while(*sign != '\0')
+        {
+          if (*sign == '-')
+            slen++;
+          sign++;
+        }
 
         while (*ss != '\0')
         {
@@ -58,5 +68,7 @@ int _atoi(char *s)
           }
           i++;
         }
-        return x;
+        if (slen % 2 == 1)
+		return -x;
+	return x;
 }
