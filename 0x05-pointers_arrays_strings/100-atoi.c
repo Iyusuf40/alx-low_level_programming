@@ -2,8 +2,8 @@ int _pow(int s, int v)
 {
   int y;
   y = 1;
-  
-  for (v; v > 0; v--)
+
+  for (v = v; v > 0; v--)
   {
     y = y * s;
   }
