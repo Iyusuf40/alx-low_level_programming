@@ -38,5 +38,5 @@ void reverse_array(int *a, int n)
 		pr_ch(a[i]);
 		i--;
 	}
-	printf("\n");
+	_putchar('\n');
 }
