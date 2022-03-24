@@ -41,5 +41,5 @@ char *_strncat(char *dest, char *src, int n)
 			src++;
 		}
 	}
-	return dest;
+	return (dest);
 }
