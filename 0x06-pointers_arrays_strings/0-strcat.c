@@ -1,5 +1,6 @@
 /**
  * _strcat- ccats sec par to fir
+ * Return: ccated str
  * @dest: first par
  * @src: sec par
  */
@@ -19,5 +20,5 @@ char *_strcat(char *dest, char *src)
 		i++;
 		src++;
 	}
-	return dest;
+	return (dest);
 }
