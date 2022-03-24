@@ -1,6 +1,18 @@
 #include "main.h"
 
 /**
+ * pr_uch- rev an array of int
+ *
+ * @n: sec par
+ */
+void pr_uch(unsigned int n)
+{
+	if (n / 10 != 0)
+		pr_uint(n / 10);
+	_putchar((n % 10) + '0');
+}
+
+/**
  * pr_ch- rev an array of int
  *
  * @n: sec par
@@ -8,14 +20,11 @@
 void pr_ch(int n)
 {
 	if (n < 0)
-		_putchar('-');
-	if (n / 10 > 0)
 	{
-		pr_ch(n / 10);
-		_putchar((n % 10) + '0');
+		_putchar('-');
+		n = -n;
 	}
-	if (n / 10 == 0)
-		_putchar(n + '0');
+	pr_uch(n);
 }
 
 /**
