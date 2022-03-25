@@ -8,14 +8,22 @@
  */
 char *change(char *c, char a, char z)
 {
-        int i = 0;
+        int i, j;
+        
+        i = j = 0;
 
         while (*(c + i) != '\0')
         {
-          if ((*(c + i) >= a && *(c + i) <= z) && ((float)*(c + i) - (a - 1)) / 13 > 1)
+          while (*(c + j) >= a && *(c + j) <= z)
+          {
+          if (((float)*(c + i) - (a - 1)) / 13 > 1)
             *(c + i) = *(c + i) - 13;
-          else if ((*(c + i) >= a && *(c + i) <= z) && ((float)*(c + i) - (a - 1)) / 13 <= 1)
+          else
             *(c + i) = *(c + i) + 13;
+          j++;
+          i = j;
+          }
+          j = i + 1;
           i++;
         }
         return (c);
