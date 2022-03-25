@@ -11,10 +11,12 @@ char *change(char *c, char a, char z)
 
 	while (*(c + i) != '\0')
 	{
-		if ((*(c + i) >= a && *(c + i) <= z) && ((float)*(c + i) - (a - 1)) / 13 > 1)
+		if ((*(c + i) >= a && *(c + i) <= z)
+			&& ((float)*(c + i) - (a - 1)) / 13 > 1)
 			*(c + i) = *(c + i) - 13;
-		/*else if ((*(c + i) >= a && *(c + i) <= z) && ((float)*(c + i) - (a - 1)) / 13 <= 1)*/
-			/**(c + i) = *(c + i) + 13;*/
+		/*else if ((*(c + i) >= a && *(c + i) <= z)*/
+			/*&& ((float)*(c + i) - (a - 1)) / 13 <= 1)*/
+			/* *(c + i) = *(c + i) + 13;*/
 		i++;
 	}
 	return (c);
