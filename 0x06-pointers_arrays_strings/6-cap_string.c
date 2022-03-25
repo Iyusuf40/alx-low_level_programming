@@ -14,4 +14,5 @@ char *cap_string(char *c)
 					*(c + i) = *(c + i) - 32;
     		i++;
 	}
+	return (c);
 }
