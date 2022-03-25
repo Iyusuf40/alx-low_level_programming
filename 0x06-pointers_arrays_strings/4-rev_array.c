@@ -1,32 +1,3 @@
-#include "main.h"
-
-/**
- * pru- rev an array of int
- *
- * @n: sec par
- */
-void pru(unsigned int n)
-{
-	if (n / 10 != 0)
-		pru(n / 10);
-	_putchar((n % 10) + '0');
-}
-
-/**
- * pr_ch- rev an array of int
- *
- * @n: sec par
- */
-void pr_ch(int n)
-{
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-	}
-	pru(n);
-}
-
 /**
  * reverse_array- rev an array of int
  * @a: 1 par
@@ -34,18 +5,21 @@ void pr_ch(int n)
  */
 void reverse_array(int *a, int n)
 {
-	int i;
+	int i, j, k;
+	int w[100];
+	int v[100];
 
 	i = n - 1;
-	while (i >= 0)
+	j = k = 0;
+	while (k < n / 2)
 	{
-		if (i != n - 1)
-		{
-			_putchar(',');
-			_putchar(' ');
-		}
-		pr_ch(a[i]);
+		w[j] = *(a + j);
+		v[j] = *(a + i);
+		*(a + j) = v[j];
+		*(a + i) = w[j];
+		j++;
 		i--;
+		k++;
 	}
-	_putchar('\n');
+	printf("\n");
 }
