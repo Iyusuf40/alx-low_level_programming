@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * reverse_array- rev an array of int
  * @a: 1 par
@@ -21,5 +22,5 @@ void reverse_array(int *a, int n)
 		i--;
 		k++;
 	}
-	printf("\n");
+	_putchar('\n');
 }
