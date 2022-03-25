@@ -22,5 +22,4 @@ void reverse_array(int *a, int n)
 		i--;
 		k++;
 	}
-	_putchar('\n');
 }
