@@ -17,8 +17,8 @@ char *change(char *c, char a, char z)
 		{
 			if (((float)*(c + i) - (a - 1)) / 13 > 1)
 				*(c + i) = *(c + i) - 13;
-			else
-				*(c + i) = *(c + i) + 13;
+		/*	else */
+			/*	*(c + i) = *(c + i) + 13; */
 			j++;
 			i = j;
 		}
