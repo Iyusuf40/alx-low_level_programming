@@ -1,29 +1,20 @@
 /**
- * change - conv to rot
- * @c: arg
+ * change- changes chars
+ * @c: par
+ * @a: sec par
+ * @z: third par
  * Return: c
  */
-char *change(char *c)
+char *change(char *c, char a, char z)
 {
 	int i = 0;
 
 	while (*(c + i) != '\0')
 	{
-		if ((*(c + i) >= 'A' && *(c + i) <= 'Z'))
-		{
-			if (((float)*(c + i) - 64) / 13 > 1)
-				*(c + i) = *(c + i) - 13;
-			else if (((float)*(c + i) - 64) / 13 <= 1)
-				*(c + i) = *(c + i) + 13;
-		}
-
-		if ((*(c + i) >= 'a' && *(c + i) <= 'z'))
-		{
-			if (((float)*(c + i) - 96) / 13 > 1)
-				*(c + i) = *(c + i) - 13;
-			else if (((float)*(c + i) - 96) / 13 <= 1)
-				*(c + i) = *(c + i) + 13;
-		}
+		if ((*(c + i) >= a && *(c + i) <= z) && ((float)*(c + i) - (a - 1)) / 13 > 1)
+			*(c + i) = *(c + i) - 13;
+		else if ((*(c + i) >= a && *(c + i) <= z) && ((float)*(c + i) - (a - 1)) / 13 <= 1)
+			*(c + i) = *(c + i) + 13;
 		i++;
 	}
 	return (c);
@@ -36,6 +27,7 @@ char *change(char *c)
  */
 char *rot13(char *c)
 {
-	change(c);
+	change(c, 'a', 'z');
+	change(c, 'A', 'Z');
 	return (c);
 }

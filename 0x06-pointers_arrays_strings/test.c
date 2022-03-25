@@ -1,32 +1,56 @@
 #include <stdio.h>
 /**
- * string_toupper - conv to upper
- * @c: arg
+ * change- changes chars
+ * @c: par
+ * @a: sec par
+ * @z: third par
  * Return: c
  */
-char *cap_string(char *c)
+char *change(char *c, char a, char z)
 {
-	int i = 0;
+        int i = 0;
 
-	while (*(c + i) != '\0')
-	{
-		if (*(c + i) >= 'a' && *(c + i) <= 'z')
-			if (*(c + i - 1) < '0' || *(c + i - 1) > '9')
-				if ((*(c + i - 1) < 'A' || *(c + i - 1) > 'Z') &&
-						(*(c + i - 1) < 'a' || *(c + i - 1) > 'z'))
-					*(c + i) = *(c + i) - 32;
-		i++;
-	}
-	return (c);
+        while (*(c + i) != '\0')
+        {
+          if ((*(c + i) >= a && *(c + i) <= z) && ((float)*(c + i) - (a - 1)) / 13 > 1)
+            *(c + i) = *(c + i) - 13;
+          else if ((*(c + i) >= a && *(c + i) <= z) && ((float)*(c + i) - (a - 1)) / 13 <= 1)
+            *(c + i) = *(c + i) + 13;
+          i++;
+        }
+        return (c);
 }
 
+/**
+ * rot13- encodes numbers
+ * @c: par
+ * Return: c
+ */
+char *rot13(char *c)
+{
+        change(c, 'a', 'z');
+        change(c, 'A', 'Z');
+        return (c);
+}
 int main(void)
 {
-    char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
-    char *ptr;
+   char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n";
+    char *p;
 
-    ptr = cap_string(str);
-    printf("%s", ptr);
-    printf("%s", str);
+    p = rot13(s);
+    printf("%s", p);
+    printf("------------------------------------\n");
+    printf("%s", s);
+    printf("------------------------------------\n");
+    p = rot13(s);
+    printf("%s", p);
+    printf("------------------------------------\n");
+    printf("%s", s);
+    printf("------------------------------------\n");
+    p = rot13(s);
+    printf("%s", p);
+    printf("------------------------------------\n");
+    printf("%s", s);
     return (0);
 }
+
