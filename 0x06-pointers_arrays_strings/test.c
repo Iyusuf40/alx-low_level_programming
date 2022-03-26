@@ -16,15 +16,16 @@ char *change(char *c, char a, char z)
         {
           while (*(c + j) >= a && *(c + j) <= z)
           {
-          if (((float)*(c + i) - (a - 1)) / 13 > 1)
-            *(c + i) = *(c + i) - 13;
-          else
             *(c + i) = *(c + i) + 13;
+            if (*(c + i) > 122)
+            {
+              *(c + i) = ((a - 1) + ((*(c + i) - (a - 1)) % 26));
+            }
           j++;
           i = j;
           }
-          j = i + 1;
           i++;
+          j = i;
         }
         return (c);
 }
