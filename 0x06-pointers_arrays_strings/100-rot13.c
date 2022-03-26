@@ -21,8 +21,11 @@ char *change(char *c, char a, char z)
 			{
 				*(c + i) = ((a - 1) + ((k - (a - 1)) % 26));
 			}
-		j = i + 1;
+			j++;
+			i = j;
+		}
 		i++;
+		j = i;
 	}
 	return (c);
 }
