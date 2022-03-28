@@ -1,17 +1,17 @@
 /**
- * _memset - sets memory of s up to n with b
- * @s: carries mem start to set to n
- * @b: what to use to set
- * @n: the size to set to
- * Return: mem pos of s
+ * _strchr- finds a char in s
+ * @s: strng to search
+ * @c: char to find
+ * Return: address of c or NULL
  */
-char *_memset(char *s, char b, unsigned int n)
+char *_strchr(char *s, char c)
 {
-	int i;
-
-	for (i = 0; i < n; i++)
+	while (*s != '\0')
 	{
-		s[i] = b;
+		if (*s == c)
+			return (s);
+		s++;
 	}
-	return (s);
+	if (*s == '\0')
+		return (*s);
 }
