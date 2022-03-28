@@ -1,4 +1,3 @@
-#include <stddef.h>
 /**
  * _strchr- finds a char in s
  * @s: strng to search
@@ -14,5 +13,5 @@ char *_strchr(char *s, char c)
 		s++;
 	}
 
-	return (NULL);
+	return (s);
 }
