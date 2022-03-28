@@ -6,7 +6,7 @@
  */
 char *_strchr(char *s, char c)
 {
-        if (*s == '')
+        if (*s == ' ' || *s == '\0')
                 return ('\0');
 	else
 	{
