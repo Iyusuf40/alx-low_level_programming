@@ -1,4 +1,3 @@
-#include <stddef.h>
 /**
  * _strchr- finds a char in s
  * @s: strng to search
@@ -7,22 +6,12 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i, j;
-
-	i = j = 0;
-
-	while (*(s + i) != 0)
-		i++;
-
-	while (j <= i)
+	while (*s != '\0')
 	{
-		if (*(s + j) == c)
-			return (s + j);
-		else if (*(s + j) == '\0')
-			return (s + j);
-		else
-			return (NULL);
-		j++;
+		if (*s == c)
+			return (s);
+		s++;
 	}
 
+	return (s);
 }
