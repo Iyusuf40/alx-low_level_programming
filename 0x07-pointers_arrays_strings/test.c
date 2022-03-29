@@ -1,42 +1,22 @@
-#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
 /**
- * _strstr - does some weird cmp
- * @haystack: first par
- * @needle: second par
- * Return: where cpm matches
+ * print_chessboard - prints chess board
+ * @a: par
  */
-char *_strstr(char *haystack, char *needle)
+void print_chessboard(char (*a)[8])
 {
-	unsigned int i, j, k, l, m;
+	int i, j;
 
-	i = j = k = l = m = 0;
+	i = j = 0;
 
-	while (*(haystack + i) != '\0')
-		i++;
-
-	while (*(needle + l) != '\0')
-		l++;
-
-	while (j < i)
+	for (i = 0; i < 8; i++)
 	{
-		k = 0;
-		while (k < l)
+		for (j = 0; j < 8; j++)
 		{
-			if (*(haystack + j) == *(needle + k))
-			{
-				while (m < l)
-				{
-					if (*(haystack + j + m) == *(needle + k + m))
-						m++;
-					else
-						break;
-				}
-				if (m == l)
-					return (haystack + j);
-			}
-			k++;
+			putchar(a[i][j]);
+			if (j  == 7)
+				putchar('\n');
 		}
-		j++;
 	}
-	return (NULL);
 }
