@@ -4,7 +4,7 @@
  * @accept: second par
  * Return: j
  */
-unsigned char *_strpbrk(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 	unsigned int i, j, k, l;
 
