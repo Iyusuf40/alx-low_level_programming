@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
 /**
@@ -13,4 +14,4 @@ void print_diagsums(int *a, int size)
 	j = size;
 
 	printf("yet to do");
-}	
+}
