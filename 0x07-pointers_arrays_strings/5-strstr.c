@@ -1,3 +1,4 @@
+#include <stddef.h>
 /**
  * _strstr - does some weird cmp
  * @haystack: first par
@@ -37,5 +38,5 @@ char *_strstr(char *haystack, char *needle)
 		}
 		j++;
 	}
-	return (haystack + j);
+	return (NULL);
 }

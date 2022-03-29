@@ -1,19 +1,20 @@
+#include <stddef.h>
 /**
- * _strpbrk - does some weird cmp
- * @s: first par
- * @accept: second par
- * Return: j
+ * _strstr - does some weird cmp
+ * @haystack: first par
+ * @needle: second par
+ * Return: where cpm matches
  */
-char *_strpbrk(char *s, char *accept)
+char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i, j, k, l;
+	unsigned int i, j, k, l, m;
 
-	i = j = k = l = 0;
+	i = j = k = l = m = 0;
 
-	while (*(s + i) != '\0')
+	while (*(haystack + i) != '\0')
 		i++;
 
-	while (*(accept + l) != '\0')
+	while (*(needle + l) != '\0')
 		l++;
 
 	while (j < i)
@@ -21,13 +22,21 @@ char *_strpbrk(char *s, char *accept)
 		k = 0;
 		while (k < l)
 		{
-			if (*(s + j) == *(accept + k))
+			if (*(haystack + j) == *(needle + k))
 			{
-				return (s + j);
+				while (m < l)
+				{
+					if (*(haystack + j + m) == *(needle + k + m))
+						m++;
+					else
+						break;
+				}
+				if (m == l)
+					return (haystack + j);
 			}
 			k++;
 		}
 		j++;
 	}
-	return (0);
+	return (NULL);
 }
