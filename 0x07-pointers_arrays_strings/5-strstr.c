@@ -1,4 +1,3 @@
-#include <stddef.h>
 /**
  * _strstr - does some weird cmp
  * @haystack: first par
@@ -7,36 +6,24 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i, j, k, l, m;
+	char *result = haystack, *fneedle = needle;
 
-	i = j = k = l = m = 0;
-
-	while (*(haystack + i) != '\0')
-		i++;
-
-	while (*(needle + l) != '\0')
-		l++;
-
-	while (j < i)
+	while (*haystack)
 	{
-		k = 0;
-		while (k < l)
+		while (*needle)
 		{
-			if (*(haystack + j) == *(needle + k))
+			if (*haystack++ != *needle++)
 			{
-				while (m < l)
-				{
-					if (*(haystack + j + m) == *(needle + k + m))
-						m++;
-					else
-						break;
-				}
-				if (m == l)
-					return (haystack + j);
+				break;
 			}
-			k++;
 		}
-		j++;
+		if (!*needle)
+		{
+			return (result);
+		}
+		needle = fneedle;
+		result++;
+		haystack = result;
 	}
-	return (NULL);
+	return (0);
 }

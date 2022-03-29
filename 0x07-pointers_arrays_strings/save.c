@@ -1,17 +1,42 @@
+#include <stddef.h>
 /**
- * _strchr- finds a char in s
- * @s: strng to search
- * @c: char to find
- * Return: address of c or NULL
+ * _strstr - does some weird cmp
+ * @haystack: first par
+ * @needle: second par
+ * Return: where cpm matches
  */
-char *_strchr(char *s, char c)
+char *_strstr(char *haystack, char *needle)
 {
-	while (*s != '\0')
-	{
-		if (*s == c)
-			return (s);
-		s++;
-	}
+	unsigned int i, j, k, l, m;
 
-	return (s);
+	i = j = k = l = m = 0;
+
+	while (*(haystack + i) != '\0')
+		i++;
+
+	while (*(needle + l) != '\0')
+		l++;
+
+	while (j < i)
+	{
+		k = 0;
+		while (k < l)
+		{
+			if (*(haystack + j) == *(needle + k))
+			{
+				while (m < l)
+				{
+					if (*(haystack + j + m) == *(needle + k + m))
+						m++;
+					else
+						break;
+				}
+				if (m == l)
+					return (haystack + j);
+			}
+			k++;
+		}
+		j++;
+	}
+	return (NULL);
 }
