@@ -8,10 +8,10 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i, j, k;
+	/*int i, j, k;*/
 
-	i = size;
-	j = size;
+	/*i = size;*/
+	/*j = size;*/
 
 	printf("yet to do");
 }
