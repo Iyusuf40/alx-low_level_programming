@@ -6,24 +6,36 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *result = haystack, *fneedle = needle;
+	unsigned int i, j, k, l, m;
 
-	while (*haystack)
+	i = j = k = l = m = 0;
+
+	while (*(haystack + i) != '\0')
+		i++;
+
+	while (*(needle + l) != '\0')
+		l++;
+
+	while (j < i)
 	{
-		while (*needle)
+		k = 0;
+		while (k < l)
 		{
-			if (*haystack++ != *needle++)
+			if (*(haystack + j) == *(needle + k))
 			{
-				break;
+				while (m < l)
+				{
+					if (*(haystack + j + m) == *(needle + k + m))
+						m++;
+					else
+						break;
+				}
+				if (m == l)
+					return (haystack + j);
 			}
+			k++;
 		}
-		if (!*needle)
-		{
-			return (result);
-		}
-		needle = fneedle;
-		result++;
-		haystack = result;
+		j++;
 	}
 	return (0);
 }
