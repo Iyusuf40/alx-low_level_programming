@@ -2,7 +2,7 @@
  * _pow_recursion - power of
  * @x: first par
  * @y: power to
- * Returb: res
+ * Return: res
  */
 int _pow_recursion(int x, int y)
 {
