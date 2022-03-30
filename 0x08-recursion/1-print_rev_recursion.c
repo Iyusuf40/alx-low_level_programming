@@ -25,6 +25,8 @@ void main_print_rev_recursion(char *s)
  */
 void _print_rev_recursion(char *s)
 {
+	if (*s == 0)
+		return;
 	main_print_rev_recursion(s);
 	_putchar('\n');
 }
