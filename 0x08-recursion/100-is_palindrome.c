@@ -1,3 +1,4 @@
+
 /**
 * char_checker_forward - checks characters of the sring from index 0
 * @s: address of string to check
@@ -12,7 +13,8 @@ int char_checker_forward(char *s)
 	{
 		return (*i);
 	}
-		return (*i);
+
+	return (*i);
 }
 
 /**
@@ -25,6 +27,7 @@ char *len(char *s)
 {
 	if (*s != 0)
 		return (len(++s));
+
 	return (s);
 }
 
@@ -46,21 +49,18 @@ int char_checker_backward(char *s, char *v)
 }
 
 /**
-* is_palindrome - checks if string is pallindrome
-* @s: string to check
-*
-* Return: 1 if true and 0 if false
+* palindrome_check - checks characters of the sring from index -1
+* @s: string address passed as arg
+* @x: to hold address of last char of string before nul
+* Return: 0 or 1
 */
-int is_palindrome(char *s)
+int palindrome_check(char *s, char *x)
 {
 	char *i = s;
 	char *j = s;
-	char *k = s;
-	char *l = s;
+	char *k = x;
 
-	k = len(l);
-
-	if (*s == 0)
+	if (k <= i)
 		return (1);
 
 	if (char_checker_forward(i) != char_checker_backward(j, k))
@@ -68,8 +68,28 @@ int is_palindrome(char *s)
 
 	if (char_checker_forward(i) == char_checker_backward(j, k))
 	{
-		return (char_checker_forward(i + 1) == char_checker_backward(j, k - 1));
+		return (palindrome_check(i + 1, k - 1));
 	}
 
 	return (1);
+}
+
+/**
+* is_palindrome - checks if string is pallindrome
+* @s: string to check
+*
+* Return: 1 if true and 0 if false
+*/
+int is_palindrome(char *s)
+{
+	int res = 0;
+	char *i = s;
+	char *k = s;
+	char *l = s;
+
+	k = len(l);
+
+	res = palindrome_check(i, k);
+
+	return (res);
 }
