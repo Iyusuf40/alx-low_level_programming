@@ -1,20 +1,34 @@
 /**
- * _pow_recursion - power of
- * @x: first par
- * @y: power to
+ * sqt - power of
+ * @n: first par
+ * @i: to
  * Return: res
  */
-int _pow_recursion(int x, int y)
+int sqt(int n, int i)
 {
-	int res = 1;
+	if (i * i == n)
+		return (i);
 
-	if (y < 0)
+	if (i > n / 2)
 		return (-1);
+	return (sqt(n, ++i));
+}
 
-	if (y == 0)
+/**
+ * _sqrt_recursion - power of
+ * @n: first par
+ *
+ * Return: res
+ */
+int _sqrt_recursion(int n)
+{
+	int k = 0;
+	int i = 1;
+
+	if (n == 1)
 		return (1);
 
-	res = x * _pow_recursion(x, y - 1);
+	k += sqt(n, i);
 
-	return (res);
+	return (k);
 }
