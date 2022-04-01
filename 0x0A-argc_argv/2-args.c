@@ -1,25 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
- * main - multiplies 2 numbers and prints the result
+ * main - prints the name of the executable
  * @argc: count of arguments
  * @argv: a pointer to array of pointers
  * Return: 0
  */
 int main(int argc, char **argv)
 {
-	int mul;
+	int i;
 
-	if (argc == 3)
+	for (i = 0; i < argc; i++)
 	{
-		mul = atoi(argv[1]) * atoi(argv[2]);
-		printf("%d\n", sum);
-	}
-	else
-	{
-		printf("Error");
-		return (1);
+		printf("%s\n", argv[i]);
 	}
 
 	return (0);
