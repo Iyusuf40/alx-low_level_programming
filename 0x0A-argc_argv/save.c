@@ -12,13 +12,13 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-		printf("%d\n", 0);
+		printf("0\n");
 	}
 	else
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if ((*argv[i] >= '0' && *argv[i] <= '9') || *argv[i] == '-')
+			if (*argv[i] >= '0' && *argv[i] <= '9')
 				sum += atoi(argv[i]);
 			else
 			{
