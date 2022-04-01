@@ -1,74 +1,37 @@
 /**
-* char_checker_forward - checks characters of the sring from index 0
-* @s: address of string to check
-*
-* Return: returns the charcter
-*/
-int char_checker_forward(char *s)
+ * wildcmp - really wild comparison
+ * @s1: strin1
+ * @s2: string2
+ * Return: 1 or 0
+ */
+int wildcmp(char *s1, char *s2)
 {
-	char *i = s;
+	char *i = s1;
+	char *j = s2;
 
-	if (*i != 0)
+	if ((*j == '*' && *i != 0) && *i == *(j + 1))
 	{
-		return (*i);
+		return (wildcmp(i, ++j));
 	}
-		return (*i);
-}
-
-/**
-* len - finds the length of the string passed as arg
-* @s: string address
-*
-* Return: returns address of the last char befor nul
-*/
-char *len(char *s)
-{
-	if (*s != 0)
-		return (len(++s));
-	return (s);
-}
-
-/**
-* char_checker_backward - checks characters of the sring from index -1
-* @s: string address passed as arg
-* @v: to hold address of last char of string before nul
-* Return: char
-*/
-int char_checker_backward(char *s, char *v)
-{
-	char *i = s;
-
-	if (i != v)
+	else if ((*j == '*' && *i != 0) && *(i + 1) != *(j + 1))
 	{
-		return (char_checker_backward(++i, v));
+		return (wildcmp(++i, j));
 	}
-	return (*(i - 1));
-}
+	else if ((*j == '*' && *i != 0) && *(i + 1) == *(j + 1))
+	{
+		return (wildcmp(++i, ++j));
+	}
+	else if ((*j == '*' && *i != 0) && *i == *(j + 1))
+	{
+		return (wildcmp(i, ++j));
+	}
 
-/**
-* is_palindrome - checks if string is pallindrome
-* @s: string to check
-*
-* Return: 1 if true and 0 if false
-*/
-int is_palindrome(char *s)
-{
-	char *i = s;
-	char *j = s;
-	char *k = s;
-	char *l = s;
-
-	k = len(l);
-
-	if (*s == 0)
-		return (1);
-
-	if (char_checker_forward(i) != char_checker_backward(j, k))
+	if (*i != *j && *j != '*')
 		return (0);
 
-	if (char_checker_forward(i) == char_checker_backward(j, k))
+	if (*i == *j && *i != 0 && *j != 0)
 	{
-		return (char_checker_forward(i + 1) == char_checker_backward(j, k - 1));
+		return (wildcmp(++i, ++j));
 	}
 
 	return (1);

@@ -9,11 +9,7 @@ int wildcmp(char *s1, char *s2)
 	char *i = s1;
 	char *j = s2;
 
-	if ((*j == '*' && *i != 0) && *i == *(j + 1))
-	{
-		return (wildcmp(i, ++j));
-	}
-	else if ((*j == '*' && *i != 0) && *(i + 1) != *(j + 1))
+	if ((*j == '*' && *i != 0) && *(i + 1) != *(j + 1))
 	{
 		return (wildcmp(++i, j));
 	}
@@ -21,7 +17,12 @@ int wildcmp(char *s1, char *s2)
 	{
 		return (wildcmp(++i, ++j));
 	}
-	else if ((*j == '*' && *i != 0) && *i == *(j + 1))
+	else if ((*j == '*' && *i == 0) && *(j + 1) == 0)
+	{
+		return (1);
+	}
+	else if ((*j == '*' && *i == 0) && *(j + 1) != 0
+		&& *(j + 1) != '*' && *(j + 2) != '*')
 	{
 		return (wildcmp(i, ++j));
 	}
