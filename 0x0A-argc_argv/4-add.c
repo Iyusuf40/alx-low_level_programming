@@ -1,5 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+/**
+ * checker- checks if a char is between 0 and 9
+ * @s: string to chec
+ * Return: 1 or 0
+ */
+int checker(char *s)
+{
+	while (*s != 0)
+	{
+		if (*s >= '0' && *s <= '9')
+			s++;
+		else
+			return (0);
+	}
+	return (1);
+}
+
 /**
  * main - adds numberss
  * @argc: number or arguments passed
@@ -18,9 +36,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (*argv[i] == 0 || *argv[i] == ' ')
-				sum += 0;
-			else if (*argv[i] >= '0' && *argv[i] <= '9')
+			if (checker(argv[i]) == 1)
 				sum += atoi(argv[i]);
 			else
 			{
