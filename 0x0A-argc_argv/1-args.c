@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints the name of the executable
+ * main - prints the number of arguments passed
  * @argc: count of arguments
  * @argv: a pointer to array of pointers
  * Return: 0
