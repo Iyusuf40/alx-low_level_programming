@@ -21,7 +21,8 @@ int wildcmp(char *s1, char *s2)
 	{
 		return (1);
 	}
-	else if ((*j == '*' && *i == 0) && *(j + 1) != 0 && *(j + 1) != '*' && *(j + 2) != '*')
+	else if ((*j == '*' && *i == 0) && *(j + 1) != 0
+		&& *(j + 1) != '*' && *(j + 2) != '*')
 	{
 		return (wildcmp(i, ++j));
 	}
