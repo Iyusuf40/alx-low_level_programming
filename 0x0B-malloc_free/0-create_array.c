@@ -1,3 +1,4 @@
+#include <stddef.h>
 /**
  * create_array - function creates an array using malloc
  * @size: size of bytes to allocate to the array
