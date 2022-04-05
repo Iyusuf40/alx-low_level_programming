@@ -28,6 +28,7 @@ char *argstostr(int ac, char **av)
 	s = malloc(len * sizeof(char));
 	while (k < ac)
 	{
+		l = 0;
 		while ((av[k][l] != 0))
 		{
 			s[m] = av[k][l];
@@ -36,6 +37,7 @@ char *argstostr(int ac, char **av)
 		}
 		s[m] = '\n';
 		k++;
+		m++;
 	}
 
 	return (s);
