@@ -1,0 +1,40 @@
+#include <stdlib.h>
+/**
+ * argstostr- joins string passed as arg on command line each ending with a \n
+ * @ac: argument count
+ * @av: pointer to strings
+ *
+ * Return: a pointer to the new string if successful
+ */
+char *argstostr(int ac, char **av)
+{
+	int i = 0, j = 0, k = 0, l = 0, m = 0, len = 0;
+	char *s;
+
+	if (ac == 0 || av == 0)
+		return (0);
+
+	while (i < ac)
+	{
+		while ((av[i][j] != 0)
+		{
+			len++;
+			j++;
+		}
+		len++;
+		i++;
+	}
+
+	while (k < ac)
+	{
+		while ((av[k][l] != 0))
+		{
+			s[m] = av[k][l];
+			l++;
+		}
+		s[m] = '\n'
+		k++;
+	}
+
+	return (s);
+}
