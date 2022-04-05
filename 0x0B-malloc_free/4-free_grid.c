@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
 /**
  * free_grid - frees up memory initially allocated to create a 2 dim array
  * @grid: the already existing grid
@@ -8,6 +9,9 @@
  */
 void free_grid(int **grid, int height __attribute__ ((unused)))
 {
-	free(*grid);
-	free(grid);
+	if (grid != NULL)
+	{
+		free(*grid);
+		free(grid);
+	}
 }
