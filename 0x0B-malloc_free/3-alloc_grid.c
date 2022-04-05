@@ -12,7 +12,7 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int i = 0, j = 0, h = 0, k = width, l = 0;
+	int i = 0, j = 0, h = 0, l = 0;
 	int **grid, *ptr;
 
 	if (width < 1 || height < 1)
@@ -37,7 +37,7 @@ int **alloc_grid(int width, int height)
 	{
 		grid[h] = ptr + l;
 		h++;
-		l += k;
+		l += width;
 	}
 
 	while (i < height)
