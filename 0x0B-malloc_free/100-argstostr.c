@@ -8,7 +8,8 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i = 0, j = 0, k = 0, l = 0, m = 0, len = 0;
+	int i = 0, j = 0, k = 0;
+	unsigned int l = 0, m = 0, len = 0;
 	char *s;
 
 	if (ac == 0 || av == 0)
@@ -30,7 +31,7 @@ char *argstostr(int ac, char **av)
 		return (0);
 	while (k < ac)
 	{
-		if ((unsigned int)m == (((unsigned int)len * (unsigned int)sizeof(char)) - 3))
+		if (m >= ((len * (unsigned int)sizeof(char)) - 3))
 			break;
 		l = 0;
 		while (av[k][l] != 0)
