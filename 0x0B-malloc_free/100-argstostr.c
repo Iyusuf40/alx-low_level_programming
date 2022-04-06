@@ -25,11 +25,13 @@ char *argstostr(int ac, char **av)
 		i++;
 	}
 
-	s = malloc((len * sizeof(char)) + 20);
+	s = malloc((len * sizeof(char)) - 2);
 	if (s == 0)
 		return (0);
 	while (k < ac)
 	{
+		if (m == (len - 2))
+			break;
 		l = 0;
 		while (av[k][l] != 0)
 		{
