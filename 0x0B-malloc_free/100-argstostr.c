@@ -30,7 +30,7 @@ char *argstostr(int ac, char **av)
 		return (0);
 	while (k < ac)
 	{
-		if ((unsigned int)m == (((unsigned int)len * (unsigned int)sizeof(char)) - 2)
+		if ((unsigned int)m == (((unsigned int)len * (unsigned int)sizeof(char)) - 2))
 			break;
 		l = 0;
 		while (av[k][l] != 0)
