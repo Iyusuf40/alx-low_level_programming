@@ -30,11 +30,11 @@ char *argstostr(int ac, char **av)
 		return (0);
 	while (k < ac)
 	{
-		if (m == (len - 2))
-			break;
 		l = 0;
 		while (av[k][l] != 0)
 		{
+			if (m == len - 2)
+				break;
 			s[m] = av[k][l];
 			l++;
 			m++;
