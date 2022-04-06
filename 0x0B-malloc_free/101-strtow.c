@@ -31,8 +31,10 @@ char **strtow(char *str)
 
 	while (s[i] != 0)
 	{
-		if (s[i] == ' ')
+		if (s[i] == ' ' || s[i] == '\t')
 			s[i] = 0;
+		while (s[i] == ' ' || s[i] == '\t')
+			i++;
 		i++;
 	}
 
@@ -45,6 +47,20 @@ char **strtow(char *str)
 	ss = malloc(l * sizeof(s));
 	if (ss == 0)
 		return 0;
+	if (s[m] != ' ' && s[m] != '\t')
+	{
+		ss[n] = s[m];
+		m++;
+		n++;
+	}
+	else
+	{
+		while (s[m] == ' ' || s[m] == '\t')
+			m++;
+		ss[n] = s[m];
+		m++;
+		n++;
+	}
 
 	while (m < len)
 	{
