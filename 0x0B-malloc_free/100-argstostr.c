@@ -33,7 +33,7 @@ char *argstostr(int ac, char **av)
 		l = 0;
 		while (av[k][l] != 0)
 		{
-			if (m == len - 4)
+			if (m == len - 10)
 				break;
 			s[m] = av[k][l];
 			l++;
