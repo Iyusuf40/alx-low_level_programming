@@ -42,7 +42,7 @@ char **strtow(char *str)
 			l++;
 		k++;
 	}
-	ss = malloc(l * sizeof(s))
+	ss = malloc(l * sizeof(s));
 	if (ss == 0)
 		return 0;
 	while (m < len)
