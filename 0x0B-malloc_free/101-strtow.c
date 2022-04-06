@@ -47,7 +47,7 @@ char **strtow(char *str)
 		return 0;
 	ss[n] = s;
 	n++;
-	while (m < len)
+	while (m < len - 1)
 	{
 		if (s[m] == 0)
 		{
@@ -56,6 +56,6 @@ char **strtow(char *str)
 		}
 		m++;
 	}
-	/*ss[n] = 0;*/
+	ss[n] = 0;
 	return (ss);
 }
