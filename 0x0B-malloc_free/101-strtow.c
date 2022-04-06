@@ -49,10 +49,11 @@ char **strtow(char *str)
 	{
 		if (s[m] == 0)
 		{
-			ss[n] = s + m;
+			ss[n] = s + m + 1;
 			n++;
 		}
 		m++;
 	}
+	ss[n] = 0;
 	return (ss);
 }
