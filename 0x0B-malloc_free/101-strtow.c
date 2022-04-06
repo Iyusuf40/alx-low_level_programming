@@ -49,7 +49,7 @@ char **strtow(char *str)
 		return 0;
 	if (s[m] != ' ' && s[m] != '\t')
 	{
-		ss[n] = s[m];
+		ss[n] = s + m;
 		m++;
 		n++;
 	}
@@ -57,7 +57,7 @@ char **strtow(char *str)
 	{
 		while (s[m] == ' ' || s[m] == '\t')
 			m++;
-		ss[n] = s[m];
+		ss[n] = s + m;
 		m++;
 		n++;
 	}
