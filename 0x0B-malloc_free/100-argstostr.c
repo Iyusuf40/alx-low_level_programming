@@ -30,8 +30,8 @@ char *argstostr(int ac, char **av)
 		return (0);
 	while (k < ac)
 	{
-		/*if (m >= len)
-			break;*/
+		if (m == len)
+			break;
 		l = 0;
 		while (av[k][l] != 0)
 		{
@@ -43,7 +43,5 @@ char *argstostr(int ac, char **av)
 		k++;
 		m++;
 	}
-
-
 	return (s);
 }
