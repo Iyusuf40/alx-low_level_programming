@@ -31,8 +31,6 @@ char *argstostr(int ac, char **av)
 		return (0);
 	while (k < ac)
 	{
-		if (m >= ((len * sizeof(char)) - 2))
-			break;
 		l = 0;
 		while (av[k][l] != 0)
 		{
@@ -43,6 +41,9 @@ char *argstostr(int ac, char **av)
 		s[m] = '\n';
 		k++;
 		m++;
+		if (m >= ((len * sizeof(char)) - 2))
+			break;
 	}
+	s[m] = 0;
 	return (s);
 }
