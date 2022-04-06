@@ -45,6 +45,8 @@ char **strtow(char *str)
 	ss = malloc(l * sizeof(s));
 	if (ss == 0)
 		return 0;
+	s[n] = s[m];
+	n++;
 	while (m < len)
 	{
 		if (s[m] == 0)
