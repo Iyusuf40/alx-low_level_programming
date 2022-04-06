@@ -33,6 +33,8 @@ char *argstostr(int ac, char **av)
 		l = 0;
 		while (av[k][l] != 0)
 		{
+			if (av[k] == 0)
+				return (s);
 			s[m] = av[k][l];
 			l++;
 			m++;
