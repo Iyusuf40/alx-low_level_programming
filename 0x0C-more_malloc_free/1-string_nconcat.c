@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		*(s + k) = *(s1 + k);
 		k++;
 	}
-	while (k < (n + i + 1))
+	while (k < (n + i))
 	{
 		*(s + k) = *(s2 + l);
 		k++;
