@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * string_nconcat - joins n number of bytes of s2 to s1
  * @s1: base string
