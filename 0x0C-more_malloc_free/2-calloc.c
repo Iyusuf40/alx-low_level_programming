@@ -5,6 +5,7 @@
  * _calloc- mimmics built incalloc
  * @nmemb: number of elements
  * @size: byte size
+ * Return: ptr
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
@@ -13,14 +14,15 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (0);
-	if (malloc(nmemb * size) == 0)
-		return (0);
+
 	ptr = malloc(nmemb * size);
+	if (ptr == 0)
+		return (0);
 
 	while (i < (size * nmemb))
 	{
 		ptr[i] = 0;
 		i++;
 	}
-	return ((void *)ptr);
+	return (ptr);
 }
