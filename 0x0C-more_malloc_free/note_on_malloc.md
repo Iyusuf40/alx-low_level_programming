@@ -6,3 +6,17 @@ To create a memory for any type use the char *pointer type: why??
  a zero in all values if it is returned to a pointer of type int.
 -can be returned to pointer of any type provided the right size was allocated and such pointer can input
  values peculiar to its type without any problems.
+
+
+There is no need to free a pointer which was declared and was not used to return malloc even if its value
+is assigned to a pre-mallocked pointer. only pointers that malloc was called upon are required to be freed
+eg
+	char *ptr1, *ptr2;
+	ptr1 = malloc(size)
+
+	ptr2= ptr1
+
+	In the above only ptr1 requires to be freed, no free required for ptr2.
+
+
+Calling a malloc function in an if statement actually alloctaes memory.
