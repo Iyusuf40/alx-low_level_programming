@@ -9,5 +9,5 @@ void *malloc_checked(unsigned int b)
 {
 	if (malloc(b) == 0)
 		exit(98);
-	return (malloc(b));
+	return ((char)malloc(b));
 }
