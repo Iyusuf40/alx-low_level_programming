@@ -49,5 +49,6 @@ int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		printf("Error\n");
 		exit(98);
 	}
+	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	return (0);
 }
