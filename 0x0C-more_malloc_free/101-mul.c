@@ -28,7 +28,7 @@ int is_both_digit(char *s1, char *s2)
 
 	res = check_digit(s1);
 	res += check_digit(s2);
-	return res;
+	return (res);
 }
 
 /**
