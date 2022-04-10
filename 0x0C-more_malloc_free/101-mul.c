@@ -6,7 +6,7 @@
  * @argv: pointer to addresses of arguments passed
  * Return: 0 if success
  */
-int main(int argc, char **argv __attribute__((unused)))
+int main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 {
 	if (argc != 3)
 	{
