@@ -1,6 +1,11 @@
 #ifndef HEADER
 #define HEADER
-
-#define ABS(x) ((x) < (0) ? (-x) : (x))
+int val(int x)
+{
+	if (x < 0)
+		return (-x);
+	return (x);
+}
+#define ABS(x) val(x)
 
 #endif
