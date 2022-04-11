@@ -1,5 +1,10 @@
 #ifndef HEADER
 #define HEADER
+/**
+ * val- converts negative integers to positive
+ * @x: int to convert
+ * Return: x
+ */
 int val(int x)
 {
 	if (x < 0)
