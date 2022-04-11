@@ -1,10 +1,10 @@
 /**
- * struct dog - a struct of dog
- * @name: name of dog
- * @age: age of dog
- * @owner: owner of the dog
+ * struct dog - a struct of dog having its name, age and owner
+ * @name: First member
+ * @age: Second member
+ * @owner: Third member
  *
- * Description: this is a struct of a dog
+ * Description: this is a struct of a dog with its name, age and owner
  */
 struct dog
 {
