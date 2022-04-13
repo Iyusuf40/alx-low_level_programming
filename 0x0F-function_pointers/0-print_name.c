@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <stdio.h>
 /**
  * print_name - a function that takes 2 arguments, second argument is a pointer
  * to a function that takes one argument which is the first argument of
