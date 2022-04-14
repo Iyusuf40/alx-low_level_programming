@@ -26,8 +26,9 @@ int main(int argc, char **argv)
 	}
 	f = &main;
 	ptr = (char *)f;
-	for (j = 0; j < i; j++)
+	for (j = 0; j < i - 1; j++)
 		printf("%x ", ptr[j]);
+	printf("%x", ptr[j]);
 	printf("\n");
 	return (0);
 }
