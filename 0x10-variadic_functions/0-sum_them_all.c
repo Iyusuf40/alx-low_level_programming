@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include <stdarg.h>
 /**
  * sum_them_all - sums all arguments save the first
