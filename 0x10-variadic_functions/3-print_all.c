@@ -17,7 +17,7 @@ void print_all(const char * const format, ...)
 		{'c', "%c"},
 		{'i', "%d"},
 		{'s', "%s"},
-		{'f', "%f"}
+		{'f', "%lf"}
 	};
 
 	va_start(ap, format);
@@ -30,7 +30,7 @@ void print_all(const char * const format, ...)
 			if (format[i] == p[j].c)
 			{
 				ptr = p[j].pt;
-				printf(ptr, va_arg(ap, int));
+				printf(ptr, va_arg(ap, char *));
 				if (format[i + 1] != 0)
 					printf(", ");
 			}
