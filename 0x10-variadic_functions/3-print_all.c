@@ -1,17 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-/**
- * struct r_ptr - struct with char member and pointer to char member
- * @c: the char
- * @pt: the pointer
- */
-typedef struct r_ptr
-{
-	char c;
-	char *pt;
-} ptr_t;
+#include "variadic_functions.h"
 
+/**
+ * print_all - prints
+ * @format: format to use
+ * @...: optional args
+ */
 void print_all(const char * const format, ...)
 {
 	int i = 0, j = 0;
