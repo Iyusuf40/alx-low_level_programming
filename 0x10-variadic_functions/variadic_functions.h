@@ -9,7 +9,7 @@
 typedef struct r_ptr
 {
 	char c;
-	char *pt;
+	void (*f)(va_list);
 } ptr_t;
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
