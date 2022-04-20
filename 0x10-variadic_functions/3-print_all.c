@@ -33,6 +33,11 @@ void sprint(va_list ap)
 {
 	char *b = va_arg(ap, char *);
 
+	if (b == 0)
+	{
+		printf("(nil)");
+		return;
+	}
 	printf("%s", b);
 }
 
