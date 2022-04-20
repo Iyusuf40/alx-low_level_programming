@@ -1,6 +1,7 @@
 #ifndef HEADER
 #define HEADER
 
+#include <stdarg.h>
 /**
  * struct r_ptr - struct with char member and pointer to char member
  * @c: the char
