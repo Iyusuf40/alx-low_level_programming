@@ -5,7 +5,7 @@
 /**
  * struct r_ptr - struct with char member and pointer to char member
  * @c: the char
- * @pt: the pointer
+ * @f: function pointer
  */
 typedef struct r_ptr
 {

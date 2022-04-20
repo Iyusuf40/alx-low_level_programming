@@ -10,6 +10,7 @@
 void cprint(va_list ap)
 {
 	char b = va_arg(ap, int);
+
 	printf("%c", b);
 }
 
@@ -20,6 +21,7 @@ void cprint(va_list ap)
 void iprint(va_list ap)
 {
 	int b = va_arg(ap, int);
+
 	printf("%d", b);
 }
 
@@ -29,7 +31,8 @@ void iprint(va_list ap)
  */
 void sprint(va_list ap)
 {
- 	char *b = va_arg(ap, char *);
+	char *b = va_arg(ap, char *);
+
 	printf("%s", b);
 }
 
@@ -40,12 +43,14 @@ void sprint(va_list ap)
 void fprint(va_list ap)
 {
 	double b = va_arg(ap, double);
+
 	printf("%f", b);
 }
 
 /**
  * get_func - chooses appropriate function and returns it
  * @s: char used to aid choice
+ * Return: function
  */
 void (*get_func(char s))(va_list)
 {
@@ -57,11 +62,12 @@ void (*get_func(char s))(va_list)
 		{'f', fprint},
 		{'z', NULL}
 	};
+
 	while (i < 4 && p[i].c != s)
 	{
 		i++;
 	}
-	return(p[i].f);
+	return (p[i].f);
 }
 
 /**
@@ -71,7 +77,6 @@ void (*get_func(char s))(va_list)
 void print_all(const char * const format, ...)
 {
 	int i = 0;
-
 	va_list ap;
 
 	va_start(ap, format);
