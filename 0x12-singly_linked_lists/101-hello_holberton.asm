@@ -10,15 +10,15 @@ main:
 .LFB0:
 	.cfi_startproc
 	endbr64
-	pushq	rbp
+	pushq	%rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
-	movq	rsp, rbp
+	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
-	leaq	.LC0(rip), rdi
+	leaq	.LC0(%rip), %rdi
 	call	puts@PLT
-	movl	$0, eax
-	popq	rbp
+	movl	$0, %eax
+	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
