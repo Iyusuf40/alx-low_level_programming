@@ -5,7 +5,7 @@
  */
 void free_listint2(listint_t **head)
 {
-	listint_t *save;
+	listint_t *save = NULL;
 
 	while (*head)
 	{
@@ -14,5 +14,4 @@ void free_listint2(listint_t **head)
 		*head = NULL;
 		*head = save;
 	}
-	*head = NULL;
 }
