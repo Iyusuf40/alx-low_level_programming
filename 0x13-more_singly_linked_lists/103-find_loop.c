@@ -18,7 +18,7 @@ listint_t *find_listint_loop(listint_t *head)
 		head = (*head).next;
 		if (head > save)
 		{
-			return (save);
+			return (head);
 		}
 	}
 	return (NULL);
