@@ -41,7 +41,7 @@ size_t print_listint_safe(const listint_t *head)
 {
 	size_t count = 0;
 	const listint_t *save = NULL;
-	const listint_t *arr[50];
+	const listint_t *arr[200];
 
 	if (head == NULL)
 	{
