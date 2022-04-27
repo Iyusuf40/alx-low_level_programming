@@ -16,7 +16,7 @@ listint_t *find_listint_loop(listint_t *head)
 	{
 		save = head;
 		head = (*head).next;
-		if (head > save)
+		if (head >= save)
 		{
 			return (head);
 		}
