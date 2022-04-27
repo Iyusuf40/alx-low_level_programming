@@ -9,7 +9,7 @@ size_t free_listint_safe(listint_t **h)
 	size_t count = 0;
 	listint_t *save = NULL, *save_n = NULL;
 
-	if (*h == NULL)
+	if (*h == NULL || h = NULL)
 	{
 		return (count);
 	}
@@ -19,11 +19,11 @@ size_t free_listint_safe(listint_t **h)
 		save_n = (**h).next;
 		free(*h);
 		*h = save_n;
-		if (*h > save)
+		if (*h >= save)
 		{
 			*h = NULL;
 			h = NULL;
-			return (count);
+			return (count + 1);
 		}
 		count++;
 	}
