@@ -21,7 +21,7 @@ size_t print_listint_safe(const listint_t *head)
 		if (head > save)
 		{
 			printf("-> [%p] %d\n", (void *)head, (*head).n);
-			return (count);
+			return (count + 1);
 		}
 		count++;
 	}
