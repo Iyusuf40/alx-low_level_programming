@@ -27,9 +27,11 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int res;
 
-	if (b == NULL || !bin_checker(b) || b == "")
+	if (b == NULL || !bin_checker(b))
 		return (0);
 
+	if (!*b)
+		return (0);
 	res = (*b - '0');
 	while (*b)
 	{
