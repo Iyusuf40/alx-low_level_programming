@@ -1,45 +1,40 @@
 #include "main.h"
 /**
- * bin_checker- checks for other than 0 and 1
- * @b: string to check
+ * print_binary - prints bin number
  *
- * Return: 0 or 1
+ * @c: number to print
  */
-int bin_checker(const char *b)
+void print_binary(unsigned long int c)
 {
-	while (*b)
+	/* len saves the length of the binary*/
+	/* len starts at -1 because when performing binary shift there is room for 1*/
+	int len = -1, i = 0;
+	/* copy saves the integer on which the operation is to be carried on*/
+	unsigned long int copy = c;
+
+	/* handle special case, where c is 0*/
+	if (c == 0)
 	{
-		if (*b != '0' && *b != '1')
-			return (0);
-		b++;
+		_putchar('0');
+		return;
 	}
-
-	return (1);
-}
-
-/**
- * binary_to_uint- checks for other than 0 and 1
- * @b: string to check
- *
- * Return: 0 or 1
- */
-unsigned int binary_to_uint(const char *b)
-{
-	unsigned int res;
-
-	if (b == NULL || !bin_checker(b))
-		return (0);
-
-	if (!*b)
-		return (0);
-	res = (*b - '0');
-	while (*b)
+	/* compute lenght of binary and save as len, len = lenght - 1*/
+	while (c)
 	{
-		if (!b[1])
-			return (res);
-		res = res * 2;
-		res += (b[1] - '0');
-		b++;
+		c = c >> 1;
+		len++;
 	}
-	return (res);
+	/**
+	* loop over copy len number of times
+	* compare 1st bit of copy with 1 achieved by shifting 1 to left len times
+	* if 1 print 1 else 0
+	* shift copy to left so as to compare second bit with 1
+	* repeat until last bit of copy
+	*/
+	while (i <= len)
+	{
+		(copy & (1 << len)) ? _putchar('1') : _putchar('0');
+		copy = copy << 1;
+		i++;
+	}
 }
