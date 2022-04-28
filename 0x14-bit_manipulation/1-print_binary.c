@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * print_binary - prints bin number
  *
