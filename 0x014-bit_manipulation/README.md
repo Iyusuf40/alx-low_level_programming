@@ -1,1 +1,0 @@
-exercise on bit manipulaion
