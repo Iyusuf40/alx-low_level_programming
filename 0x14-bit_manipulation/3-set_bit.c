@@ -1,0 +1,17 @@
+#include "main.h"
+/**
+ * set_bit - gets bit at index
+ * @n: number to check
+ * @index: index to check
+ *
+ * Return: 1 or 0
+ */
+int set_bit(unsigned long int *n, unsigned int index)
+{
+	if (!(*n & (1 << index)))
+	{
+		*n = *n | (1 << index);
+		return (1);
+	}
+	return (1);
+}
