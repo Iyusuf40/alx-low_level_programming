@@ -20,6 +20,9 @@ int get_bit(unsigned long int n, unsigned int index)
 	if (n == 0 && index == 0)
 		return (0);
 
+	if (index > (sizeof(int) * 16))
+		return (-1);
+
 	if (index >= len)
 		return (0);
 
