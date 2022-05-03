@@ -1,3 +1,4 @@
+#include <string.h>
 #include "main.h"
 /**
  * read_textfile - reads filename to a buffer
@@ -29,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	ret = 0;
 
-	ret = write(1, buff, letters);
+	ret = write(1, buff, strlen(buff));
 
 	free(buff);
 
