@@ -15,7 +15,12 @@ int _read(char *file, char *buff)
 	fd = open(file, O_RDONLY);
 	if (fd < 0)
 		return (-1);
-	rd = read(fd, buff, 1024);
+	while (1)
+	{
+		rd = read(fd, buff, 1024);
+		if (rd < 1024)
+			break;
+	}
 	if (rd < 0)
 		return (-1);
 
@@ -64,7 +69,7 @@ int _write(char *file, char *buff)
 int main(int argc, char *argv[])
 {
 	int ret;
-	char buff[1024];
+	char buff[10000];
 
 	if (argc != 3)
 	{
