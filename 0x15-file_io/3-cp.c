@@ -22,7 +22,7 @@ int _read(char *file, char *buff, int *n)
 		*n = *n + rd;
 		if (rd != 1024)
 			break;
-		i += (rd - 1);
+		i += rd;
 	}
 	if (rd == -1)
 		return (-1);
