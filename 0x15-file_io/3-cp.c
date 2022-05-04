@@ -43,7 +43,7 @@ int _write(char *file, char *buff)
 {
 	int fd, wr;
 
-	if (!file)
+	if (!file || *file == 0)
 		return (-1);
 
 	fd = open(file, O_WRONLY | O_CREAT | O_TRUNC, 00664);
