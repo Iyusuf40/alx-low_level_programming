@@ -8,7 +8,7 @@
  */
 int _read(char *file, char *buff)
 {
-	int fd, rd;
+	int fd, rd, i = 0;
 
 	if (file == NULL)
 		return (-1);
@@ -17,9 +17,10 @@ int _read(char *file, char *buff)
 		return (-1);
 	while (1)
 	{
-		rd = read(fd, buff, 1024);
-		if (rd < 1024)
+		rd = read(fd, (buff + i), 1024);
+		if (rd != 1024)
 			break;
+		i += rd;
 	}
 	if (rd < 0)
 		return (-1);
