@@ -10,7 +10,7 @@ int _read(char *file, char *buff)
 {
 	int fd, rd, i = 0;
 
-	if (file == NULL)
+	if (file == NULL || *file == 0)
 		return (-1);
 	fd = open(file, O_RDONLY);
 	if (fd < 0)
@@ -56,7 +56,7 @@ int _write(char *file, char *buff)
 	wr = close(fd);
 	if (wr < 0)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 	return (1);
@@ -81,13 +81,13 @@ int main(int argc, char *argv[])
 	ret = _read(argv[1], buff);
 	if (ret < 0)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	ret = _write(argv[2], buff);
 	if (ret < 0)
 	{
-		dprintf(2, "Error: Can't write to file %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 		exit(99);
 	}
 	exit(EXIT_SUCCESS);
