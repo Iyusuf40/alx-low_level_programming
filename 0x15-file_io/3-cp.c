@@ -6,7 +6,7 @@
  * @buff: save
  * Return: -1 or 1
  */
-int _read(char *file, char *buff)
+int _read(char *file, char *buff, int *n)
 {
 	int fd, rd, i = 0;
 
@@ -18,6 +18,7 @@ int _read(char *file, char *buff)
 	while (1)
 	{
 		rd = read(fd, (buff + i), 1024);
+		*n = *n + rd;
 		if (rd != 1024)
 			break;
 		i += rd;
@@ -39,7 +40,7 @@ int _read(char *file, char *buff)
  * @buff: save
  * Return: -1 or 1
  */
-int _write(char *file, char *buff)
+int _write(char *file, char *buff, int n)
 {
 	int fd, wr;
 
@@ -50,7 +51,7 @@ int _write(char *file, char *buff)
 	if (fd < 0)
 		return (-1);
 
-	wr = write(fd, buff, strlen(buff));
+	wr = write(fd, buff, n);
 	if (wr < 0)
 		return (-1);
 	wr = close(fd);
@@ -69,7 +70,7 @@ int _write(char *file, char *buff)
  */
 int main(int argc, char *argv[])
 {
-	int ret;
+	int ret, n = 0;
 	char buff[10000];
 
 	if (argc != 3)
@@ -78,13 +79,13 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	ret = _read(argv[1], buff);
+	ret = _read(argv[1], buff, &n);
 	if (ret < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	ret = _write(argv[2], buff);
+	ret = _write(argv[2], buff, n);
 	if (ret < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
