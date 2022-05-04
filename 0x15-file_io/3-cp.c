@@ -27,10 +27,8 @@ int _read(char *file, char *buff)
 
 	rd = close(fd);
 	if (rd < 0)
-	{
-		dprintf(2, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
+		return (-2);
+
 	return (1);
 }
 /**
@@ -55,10 +53,7 @@ int _write(char *file, char *buff)
 		return (-1);
 	wr = close(fd);
 	if (wr < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
+		return (-2);
 	return (1);
 }
 /**
@@ -79,16 +74,26 @@ int main(int argc, char *argv[])
 	}
 
 	ret = _read(argv[1], buff);
-	if (ret < 0)
+	if (ret == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
+	if (ret == -2)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
 	ret = _write(argv[2], buff);
-	if (ret < 0)
+	if (ret == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 		exit(99);
+	}
+	if (ret == -2)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", fd);
+		exit(100);
 	}
 	exit(EXIT_SUCCESS);
 }
