@@ -22,7 +22,7 @@ int _read(char *file, char *buff, int *n)
 		*n = *n + rd;
 		if (rd != 1024)
 			break;
-		i += rd;
+		i += (rd - 1);
 	}
 	if (rd == -1)
 		return (-1);
@@ -33,7 +33,7 @@ int _read(char *file, char *buff, int *n)
 		dprintf(2, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
-	return (*n);
+	return (1);
 }
 /**
  * _write- write to a file
