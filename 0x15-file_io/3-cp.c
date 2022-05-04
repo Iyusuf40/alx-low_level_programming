@@ -49,7 +49,7 @@ int _write(char *file, char *buff, int n)
 	if (!file || *file == 0)
 		return (-1);
 
-	fd = open(file, O_WRONLY | O_CREAT | O_TRUNC, 00664);
+	fd = open(file, O_WRONLY | O_CREAT | O_TRUNC | O_SYNC, 00664);
 	if (fd < 0)
 		return (-1);
 
