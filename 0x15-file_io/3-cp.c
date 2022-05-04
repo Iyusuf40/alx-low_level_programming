@@ -25,7 +25,10 @@ int _read(char *file, char *buff, int *n)
 		i += rd;
 	}
 	if (rd == -1)
+	{
+		close(fd);
 		return (-1);
+	}
 
 	rd = close(fd);
 	if (rd != 0)
@@ -55,7 +58,10 @@ int _write(char *file, char *buff, int n)
 
 	wr = write(fd, buff, n);
 	if (wr == -1)
+	{
+		close(fd);
 		return (-1);
+	}
 	wr = close(fd);
 	if (wr != 0)
 	{
