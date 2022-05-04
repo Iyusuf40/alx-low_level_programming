@@ -4,6 +4,7 @@
  * _read- reads from a file to buff
  * @file: source
  * @buff: save
+ * @n: pointer to n == count reads made
  * Return: -1 or 1
  */
 int _read(char *file, char *buff, int *n)
@@ -38,6 +39,7 @@ int _read(char *file, char *buff, int *n)
  * _write- write to a file
  * @file: destination
  * @buff: save
+ * @n: number of bytes to write
  * Return: -1 or 1
  */
 int _write(char *file, char *buff, int n)
@@ -66,6 +68,7 @@ int _write(char *file, char *buff, int n)
  * main - a program that copies a file to another file
  * @argc: no of args passed
  * @argv: array of pointers to args passed
+ *
  * Return: 0 or 1
  */
 int main(int argc, char *argv[])
