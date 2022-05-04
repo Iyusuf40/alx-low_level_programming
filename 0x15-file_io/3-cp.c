@@ -24,11 +24,11 @@ int _read(char *file, char *buff, int *n)
 			break;
 		i += rd;
 	}
-	if (rd < 0)
+	if (rd == -1)
 		return (-1);
 
 	rd = close(fd);
-	if (rd < 0)
+	if (rd == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", fd);
 		exit(100);
@@ -54,10 +54,10 @@ int _write(char *file, char *buff, int n)
 		return (-1);
 
 	wr = write(fd, buff, n);
-	if (wr < 0)
+	if (wr == -1)
 		return (-1);
 	wr = close(fd);
-	if (wr < 0)
+	if (wr == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
