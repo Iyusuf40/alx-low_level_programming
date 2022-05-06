@@ -152,7 +152,11 @@ int main(int argc, char *argv[])
 	p_magic(buff);
 	p_class(buff);
 	p_data(buff);
-	printf("  Version:			     1 (current)\n");
+	if (buff[6] != EV_CURRENT)
+		printf("  Version:                           %c (invalid version)\n",
+		(buff[6] + '0'));
+	else
+		printf("  Version:			     1 (current)\n");
 	p_ABI(buff);
 	printf("  ABI Version:                       0\n");
 	p_type(buff);
