@@ -9,9 +9,9 @@ void p_data(unsigned char buff[])
 {
 	printf("  Data:				     ");
 
-	if (buff[5] == 1)
+	if (buff[5] == ELFDATA2LSB)
 		printf("2's complement, little endian\n");
-	else if (buff[5] == 2)
+	else if (buff[5] == ELFDATA2MSB)
 		printf("2's complement, big endian\n");
 	else
 		printf("invalid\n");
@@ -34,15 +34,15 @@ void p_entry(unsigned char buff[])
 void p_type(unsigned char buff[])
 {
 	printf("  Type:                              ");
-	if (buff[16] == 0)
+	if (buff[16] == EM_NONE)
 		printf("invalid\n");
-	else if (buff[16] == 1)
+	else if (buff[16] == ET_REL)
 		printf("REL (Relocatable file)\n");
-	else if (buff[16] == 2)
+	else if (buff[16] == ET_EXEC)
 		printf("EXEC (Executable file)\n");
-	else if (buff[16] == 3)
+	else if (buff[16] == ET_DYN)
 		printf("DYN (Shared object file)\n");
-	else if (buff[16] == 4)
+	else if (buff[16] == ET_CORE)
 		printf("CORE (Core file)\n");
 
 }
@@ -54,10 +54,10 @@ void p_ABI(unsigned char buff[])
 {
 	printf("  OS/ABI:			     ");
 
-	if (buff[7] == 0)
+	if (buff[7] == ELFOSABI_SYSV)
 		printf("UNIX - System V\n");
-	else if (buff[7] == 1)
-		printf("HP-UX ABI\n");
+	else if (buff[7] == ELFOSABI_HPUX)
+		printf("HP-UX\n");
 	else
 		printf("invalid\n");
 }
@@ -69,9 +69,9 @@ void p_class(unsigned char buff[])
 {
 	printf("  class:			     ");
 
-	if (buff[4] == 2)
+	if (buff[4] == ELFCLASS64)
 		printf("ELF64\n");
-	else if (buff[4] == 1)
+	else if (buff[4] == ELFCLASS32)
 		printf("ELF32\n");
 	else
 		printf("invalid\n");
@@ -141,7 +141,7 @@ int main(int argc, char *argv[])
 	}
 
 	rd = read(fd, buff, 64);
-	buff[64] = 0;
+
 	if (rd == -1)
 	{
 		printf("error reading\n");
