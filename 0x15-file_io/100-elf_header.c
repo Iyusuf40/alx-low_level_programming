@@ -24,7 +24,11 @@ void p_entry(unsigned char buff[])
 {
 	printf("  Entry point address:               ");
 	if (buff[24] != 0)
-		printf("0x%x%x\n", buff[25], buff[24]);
+		printf("0x%02x%02x\n", buff[25], buff[24]);
+	if (buff[26] != 0)
+		printf("%02x\n", buff[26]);
+	if (buff[26] != 0)
+		printf("%02x%02x\n", buff[26], buff[25]);
 }
 /**
  * p_type - prints type of file
@@ -58,8 +62,16 @@ void p_ABI(unsigned char buff[])
 		printf("UNIX - System V\n");
 	else if (buff[7] == ELFOSABI_HPUX)
 		printf("HP-UX\n");
+	else if (buff[7] == ELFOSABI_NETBSD)
+		printf("UNIX - NetBSD\n");
+	else if (buff[7] == ELFOSABI_LINUX)
+		printf("UNIX - Linux\n");
+	else if (buff[7] == ELFOSABI_SOLARIS)
+		printf("UNIX - Solaris\n");
+	else if (buff[7] == ELFOSABI_FREEBSD)
+		printf("UNIX - FreeBSD\n");
 	else
-		printf("invalid\n");
+		printf("<unknown: %02x>", buff[7]);
 }
 /**
  * p_class - print magic line
