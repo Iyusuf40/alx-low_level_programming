@@ -71,7 +71,7 @@ void p_ABI(unsigned char buff[])
 	else if (buff[7] == ELFOSABI_FREEBSD)
 		printf("UNIX - FreeBSD\n");
 	else
-		printf("<unknown: %02x\n>", buff[7]);
+		printf("\n");
 }
 /**
  * p_class - print magic line
