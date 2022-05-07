@@ -24,11 +24,11 @@ void p_entry(unsigned char buff[])
 {
 	printf("  Entry point address:               ");
 	if (buff[26] != 0)
-		printf("0x%02x%02x%02x%02x\n", buff[27], buff[26], buff[25], buff[24]);
+		printf("0x%x%x%x%x\n", buff[27], buff[26], buff[25], buff[24]);
 	else if (buff[25] != 0)
-		printf("0x%02x%02x%02x\n", buff[26], buff[25], buff[24]);
+		printf("0x%x%x%x\n", buff[26], buff[25], buff[24]);
 	else if (buff[24] != 0)
-		printf("0x%02x%02x\n", buff[25], buff[24]);
+		printf("0x%x%x\n", buff[25], buff[24]);
 }
 /**
  * p_type - prints type of file
