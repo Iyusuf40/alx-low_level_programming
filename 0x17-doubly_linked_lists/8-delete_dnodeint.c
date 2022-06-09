@@ -22,9 +22,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 					(*head)->prev = NULL;
 				return (1);
 			}
+			if (save->next)
+				(save->next)->prev = save->prev;
 			(save->prev)->next = save->next;
-			/*if (save->next)*/
-				/*(save->next)->prev = save->prev;*/
 			return (1);
 		}
 		save = save->next;
