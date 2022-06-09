@@ -30,6 +30,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		}
 		save = save->next;
 		count++;
+		if (count > index)
+			return (-1);
 	}
 	return (-1);
 }
