@@ -26,8 +26,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		return (0);
 	}
-	new_node->key = (char *)key;
-	new_node->value = (char *)value;
+	new_node->key = strdup((char *)key);
+	new_node->value = strdup((char *)value);
 	new_node->next = NULL;
 	if (*address == NULL)
 	{
