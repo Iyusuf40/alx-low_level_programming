@@ -35,7 +35,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	else
 	{
 		new_node->next = *address;
-		*address = new_node;
+		address = &new_node;
 	}
 	return (1);
 }
