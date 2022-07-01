@@ -32,7 +32,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		*address = new_node;
 	}
-	else
+	else if (*address && sizeof(*address) == sizeof(hash_node_t *))
 	{
 		new_node->next = *address;
 		*address = new_node;
