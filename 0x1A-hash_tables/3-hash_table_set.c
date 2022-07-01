@@ -14,12 +14,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	hash_node_t __attribute__((unused))*head = NULL, *new_node;
 
-	/*hash_code = hash_djb2((unsigned char *)key);*/
+	if (!key || !strlen(key))
+		return (0);
+
 	index = key_index((unsigned char *)key, ht->size);
 
 	address = ht->array + index;
 
-	/*head = *address;*/
 	new_node = malloc(sizeof(hash_node_t));
 	if (!new_node)
 	{
