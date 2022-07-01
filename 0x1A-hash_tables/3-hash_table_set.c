@@ -17,7 +17,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/*hash_code = hash_djb2((unsigned char *)key);*/
 	index = key_index((unsigned char *)key, ht->size);
 
-	address = ht->array + index;
+	address = ht->array + index + 1;
 
 	/*head = *address;*/
 	new_node = malloc(sizeof(hash_node_t));
