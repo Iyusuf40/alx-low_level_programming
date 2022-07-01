@@ -11,6 +11,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int __attribute__((unused))hash_code, index;
 	hash_node_t **address = NULL;
+
 	hash_node_t __attribute__((unused))*head = NULL, *new_node;
 
 	/*hash_code = hash_djb2((unsigned char *)key);*/
@@ -18,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	address = ht->array + index;
 
-	/*head = malloc(sizeof(hash_node_t));*/
+	/*head = *address;*/
 	new_node = malloc(sizeof(hash_node_t));
 	if (!new_node)
 	{
@@ -27,7 +28,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->key = (char *)key;
 	new_node->value = (char *)value;
 	new_node->next = NULL;
-	if (!*address)
+	if (!*address || sizeof(*address) != sizeof(hash_node_t))
 	{
 		*address = new_node;
 	}
