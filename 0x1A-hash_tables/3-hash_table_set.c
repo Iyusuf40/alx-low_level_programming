@@ -30,7 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->next = NULL;
 	if (!*address || sizeof(**address) != sizeof(hash_node_t))
 	{
-		address = &new_node;
+		*address = NULL;
 	}
 	else
 	{
