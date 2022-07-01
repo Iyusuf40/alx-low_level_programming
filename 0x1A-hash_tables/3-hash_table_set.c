@@ -9,10 +9,10 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int hash_code, index;
-	hash_node_t *address = NULL, *head = NULL, *new_node;
+	unsigned long int __attribute__((unused))hash_code, index;
+	hash_node_t **address = NULL, *head = NULL, *new_node;
 
-	hash_code = hash_djb2((unsigned char *)key);
+	/*hash_code = hash_djb2((unsigned char *)key);*/
 	index = key_index((unsigned char *)key, ht->size);
 
 	address = ht->array + index;
