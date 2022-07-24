@@ -1,1 +1,3 @@
-This is my repo on c programming
+# This repo contains C codes
+
+Lessons on low lwvwl programming - ALX
