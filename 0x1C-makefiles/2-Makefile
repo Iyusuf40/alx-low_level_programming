@@ -7,11 +7,12 @@ SRC = $(wildcard *.c)
 OBJ = $(SRC:%.c=%.o)
 NAME = school
 
-all: school
-school: $(OBJ)
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-school.o: school.c
+school.o:
 	$(CC) -c -o school.o school.c
-main.o: main.c
+main.o:
 	$(CC) -c -o main.o main.c
 
+#$(OBJ): $(SRC)
+#	$(CC) -c -o $@ $<
