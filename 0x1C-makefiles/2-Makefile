@@ -1,11 +1,12 @@
 # my first makefile
 
 CC = gcc
-SRC = $(wildcard *.c)
+#SRC = $(wildcard *.c)
+SRC = main.c school.c
 OBJ = $(SRC:%.c=%.o)
 NAME = school
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-$(OBJ): $(SRC)
+$.o: $.c
 	$(CC) 	-c -o $@ $(@:%.o=%.c)
