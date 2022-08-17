@@ -35,6 +35,25 @@ def island_perimeter(grid):
                 if next_row < grid_height and not \
                         grid[next_row][current_index]:
                     perimeter += 1
+
+                if prev_index < 0:
+                    if prev_row < 0:
+                        perimeter += 2
+                    elif next_row == grid_height:
+                        perimeter += 2
+                    else:
+                        perimeter += 1
+                if next_index == max_row_length:
+                    if prev_row < 0:
+                        perimeter += 2
+                    elif next_row == grid_height:
+                        perimeter += 2
+                    else:
+                        perimeter += 1
+
+                if prev_row < 0 or next_row == grid_height:
+                    perimeter += 1
+
             current_index += 1
         row_index += 1
 
