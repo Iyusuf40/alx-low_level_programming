@@ -1,8 +1,8 @@
 # my first makefile
 
-CC := gcc
+CC = gcc
 #SRC := $(wildcard *.c)
-SRC := main.c school.c
+SRC = main.c school.c
 
 all: schoool
 schoool:
