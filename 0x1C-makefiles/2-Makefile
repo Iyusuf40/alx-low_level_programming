@@ -6,7 +6,8 @@ SRC = main.c school.c
 OBJ = $(SRC:%.c=%.o)
 NAME = school
 
-all: $(OBJ)
+# make automatically compiles to object file via implicit rules
+all: $(OBJ) 
 	$(CC) $(OBJ) -o $(NAME)
-$.o: $.c
-	$(CC) 	-c -o $@ $(@:%.o=%.c)
+#$(OBJ): $(SRC)  # hence this part is not required
+#	$(CC) 	-c -o $@ $(@:%.o=%.c)
