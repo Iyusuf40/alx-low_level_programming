@@ -9,10 +9,7 @@ NAME = school
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-school.o:
-	$(CC) -c -o school.o school.c
-main.o:
-	$(CC) -c -o main.o main.c
-
+%.o: %.c
+	$(CC) -c -o $@ $<
 #$(OBJ): $(SRC)
 #	$(CC) -c -o $@ $<
