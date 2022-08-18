@@ -5,7 +5,7 @@ CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:%.c=%.o)
 NAME = school
-RM = rm
+RM = rm -f
 
 # make automatically compiles to object file via implicit rules
 all: $(OBJ) 
@@ -21,4 +21,5 @@ fclean:
 	$(RM) *~ $(NAME) $(OBJ)
 
 re:
-	$(CC) $(SRC) -o $(NAME)
+	@touch $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
