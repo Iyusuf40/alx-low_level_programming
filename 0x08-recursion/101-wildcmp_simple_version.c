@@ -21,10 +21,8 @@ int wildcmp(char *s1, char *s2)
 		x = wildcmp(s1, ++s2);
 		if (!x)
 			return (wildcmp(++s1, s));
-		else if (x)
-			return (1);
 		else
-			return (0);
+			return (1);
 	}
 
 	return (0);
