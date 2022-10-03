@@ -38,6 +38,9 @@ int get_first_index(int *array, size_t low, size_t high, int value)
 {
 	size_t index = high - 1;
 
+	if (index < low)
+		return ((int) high);
+
 	if (array[index] == value)
 		return (recursive_search(array, low, high, value));
 	else
