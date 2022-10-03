@@ -69,7 +69,11 @@ int recursive_search(int *array, size_t low, size_t high, int value)
 		return (get_first_index(array, low, mid, value));
 	}
 	if (array[mid] > value)
+	{
+		if (!(high + low) % 2)
+			mid++;
 		return (recursive_search(array, low, (high - mid), value));
+	}
 	else
 		return (recursive_search(array, (mid + 1), high, value));
 	return (-1);
