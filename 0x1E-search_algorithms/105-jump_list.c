@@ -34,9 +34,6 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	}
 	if (high >= size)
 		high = size - 1;
-	p = (size_t)list;
-	p = p - (factor * (high - 1));
-	x = (listint_t *)p;
 	printf("Value found between indexes [%lu] and [%lu]\n", low, high);
 	while (low <= high)
 	{
