@@ -8,7 +8,7 @@
  */
 void print_sub_list(listint_t *list, size_t low, size_t high)
 {
-	printf("\nSearching in sublist:\n");
+	printf("\nSearching in list:\n");
 	while (low <= high)
 	{
 		printf("\tindex -> %lu value -> %d", list->index, list->n);
